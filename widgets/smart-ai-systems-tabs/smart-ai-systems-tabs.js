@@ -2,12 +2,13 @@
   'use strict';
 
   var ROOT_ID = 'shi-ai-systems-root';
+  var S = '#' + ROOT_ID;
 
   /* ── Inject external assets once ── */
-  function injectLink(href, rel) {
+  function injectLink(href) {
     if (document.querySelector('link[href="' + href + '"]')) return;
     var el = document.createElement('link');
-    el.rel  = rel || 'stylesheet';
+    el.rel  = 'stylesheet';
     el.href = href;
     document.head.appendChild(el);
   }
@@ -15,196 +16,312 @@
   injectLink('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
   injectLink('https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css');
 
-  /* ── Scoped CSS ── */
+  /* ── Scoped CSS — all rules prefixed with #shi-ai-systems-root ── */
   var CSS = `
-    #${ROOT_ID} *, #${ROOT_ID} *::before, #${ROOT_ID} *::after {
-      box-sizing: border-box; margin: 0; padding: 0;
+    ${S}, ${S} * , ${S} *::before, ${S} *::after {
+      box-sizing: border-box !important;
+      font-family: 'Poppins', sans-serif !important;
+      text-align: left !important;
     }
-    #${ROOT_ID} {
-      font-family: 'Poppins', sans-serif;
-      color: #111;
+
+    ${S} { color: #111 !important; }
+
+    /* reset headings completely */
+    ${S} h1, ${S} h2, ${S} h3, ${S} h4 {
+      font-weight: 700 !important;
+      color: #111 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      line-height: 1.25 !important;
+      letter-spacing: normal !important;
     }
-    .shi {
-      display: flex;
-      min-height: 520px;
-      background: transparent;
+
+    /* reset paragraphs and lists */
+    ${S} p  { margin: 0 !important; padding: 0 !important; }
+    ${S} ul { margin: 0 !important; padding: 0 !important; list-style: none !important; }
+    ${S} li { margin: 0 !important; padding: 0 !important; }
+    ${S} a  { text-decoration: none !important; }
+
+    /* ── Outer wrapper ── */
+    ${S} .shi {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: flex-start !important;
+      min-height: 520px !important;
+      background: transparent !important;
+      width: 100% !important;
     }
-    .shi h1, .shi h2, .shi h3 {
-      font-family: inherit;
-      font-weight: 700;
-      color: #111;
+
+    /* ── Sidebar ── */
+    ${S} .shi-sidebar {
+      width: 260px !important;
+      min-width: 260px !important;
+      max-width: 260px !important;
+      flex-shrink: 0 !important;
+      padding: 2rem 1.25rem 1.5rem !important;
+      display: flex !important;
+      flex-direction: column !important;
+      background: transparent !important;
     }
-    .shi-sidebar {
-      width: 260px;
-      min-width: 260px;
-      padding: 2rem 1.25rem 1.5rem;
-      display: flex;
-      flex-direction: column;
-      background: transparent;
+
+    ${S} .shi-eyebrow {
+      font-size: 10px !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.12em !important;
+      text-transform: uppercase !important;
+      color: #1BBFA0 !important;
+      margin-bottom: 0.6rem !important;
+      line-height: 1.4 !important;
     }
-    .shi-eyebrow {
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #1BBFA0;
-      margin-bottom: 0.6rem;
+
+    ${S} .shi-heading {
+      font-size: 22px !important;
+      line-height: 1.2 !important;
+      margin-bottom: 0.75rem !important;
+      color: #111 !important;
+      font-weight: 700 !important;
     }
-    .shi-heading {
-      font-size: 22px;
-      line-height: 1.2;
-      margin-bottom: 0.75rem;
-      color: #111;
+
+    ${S} .shi-desc {
+      font-size: 12px !important;
+      line-height: 1.65 !important;
+      color: #444 !important;
+      margin-bottom: 1.5rem !important;
     }
-    .shi-desc {
-      font-size: 12px;
-      line-height: 1.65;
-      color: #444;
-      margin-bottom: 1.5rem;
+
+    /* ── Tab nav ── */
+    ${S} .shi-nav {
+      flex: 1 !important;
     }
-    .shi-nav {
-      list-style: none;
-      flex: 1;
+
+    ${S} .shi-nav li {
+      display: flex !important;
+      align-items: center !important;
+      gap: 9px !important;
+      padding: 0.55rem 0.75rem 0.55rem 12px !important;
+      font-size: 12.5px !important;
+      font-weight: 400 !important;
+      cursor: pointer !important;
+      color: #555 !important;
+      border-left: 2px solid transparent !important;
+      border-top: none !important;
+      border-right: none !important;
+      border-bottom: none !important;
+      border-radius: 0 8px 8px 0 !important;
+      transition: color 0.2s, border-color 0.2s, background 0.2s !important;
+      line-height: 1.3 !important;
+      user-select: none !important;
+      background: transparent !important;
     }
-    .shi-nav li {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      padding: 0.55rem 0.75rem 0.55rem 12px;
-      font-size: 12.5px;
-      cursor: pointer;
-      color: #555;
-      border-left: 2px solid transparent;
-      border-radius: 0 8px 8px 0;
-      transition: color 0.2s, border-color 0.2s, background 0.2s;
-      line-height: 1.3;
-      user-select: none;
+
+    ${S} .shi-nav li:hover { color: #111 !important; }
+
+    ${S} .shi-nav li.shi-on {
+      color: #111 !important;
+      border-left-color: #1BBFA0 !important;
+      font-weight: 500 !important;
+      background: #f8fafc !important;
     }
-    .shi-nav li:hover { color: #111; }
-    .shi-nav li.shi-on {
-      color: #111;
-      border-left-color: #1BBFA0;
-      font-weight: 500;
-      background: #f8fafc;
+
+    ${S} .shi-nav li .shi-ni {
+      font-size: 14px !important;
+      color: #1BBFA0 !important;
+      flex-shrink: 0 !important;
+      line-height: 1 !important;
     }
-    .shi-nav li .shi-ni {
-      font-size: 13px;
-      color: #1BBFA0;
-      flex-shrink: 0;
+
+    /* ── Need help box ── */
+    ${S} .shi-help {
+      padding: 1rem !important;
+      background: #f8fafc !important;
+      border-radius: 14px !important;
+      margin-top: 1.25rem !important;
     }
-    .shi-help {
-      padding: 1rem;
-      background: #f8fafc;
-      border-radius: 14px;
-      margin-top: 1.25rem;
+
+    ${S} .shi-help-t {
+      font-size: 11.5px !important;
+      font-weight: 600 !important;
+      margin-bottom: 0.25rem !important;
+      color: #111 !important;
+      line-height: 1.4 !important;
     }
-    .shi-help-t {
-      font-size: 11.5px;
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-      color: #111;
+
+    ${S} .shi-help-b {
+      font-size: 11px !important;
+      line-height: 1.5 !important;
+      color: #555 !important;
+      margin-bottom: 0.5rem !important;
     }
-    .shi-help-b {
-      font-size: 11px;
-      line-height: 1.5;
-      color: #555;
-      margin-bottom: 0.5rem;
+
+    ${S} .shi-help a {
+      font-size: 11.5px !important;
+      color: #1BBFA0 !important;
+      text-decoration: underline !important;
     }
-    .shi-help a {
-      font-size: 11.5px;
-      color: #1BBFA0;
-      text-decoration: underline;
+
+    /* ── Content area ── */
+    ${S} .shi-content {
+      flex: 1 !important;
+      min-width: 0 !important;
+      padding: 2rem 1.75rem !important;
+      overflow: hidden !important;
+      background: transparent !important;
     }
-    .shi-content {
-      flex: 1;
-      padding: 2rem 1.75rem;
-      overflow: hidden;
-      position: relative;
-      background: transparent;
+
+    /* ── Panels ── */
+    ${S} .shi-panel { display: none !important; }
+
+    ${S} .shi-panel.shi-on {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      gap: 1.75rem !important;
+      animation: shi-slide-in 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
     }
-    .shi-panel { display: none; }
-    .shi-panel.shi-on {
-      display: flex;
-      align-items: center;
-      gap: 1.75rem;
-      animation: shi-slide-in 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
+    ${S} .shi-panel.shi-grid.shi-on {
+      display: block !important;
     }
-    .shi-panel.shi-grid.shi-on { display: block; }
+
     @keyframes shi-slide-in {
       from { opacity: 0; transform: translateY(28px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-    .shi-img {
-      width: 240px;
-      min-width: 200px;
-      height: 230px;
-      border-radius: 12px;
-      background: #f0f0f0;
-      border: 0.5px solid #e2e2e2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      overflow: hidden;
+
+    /* ── Image placeholder ── */
+    ${S} .shi-img {
+      width: 240px !important;
+      min-width: 200px !important;
+      max-width: 240px !important;
+      height: 230px !important;
+      border-radius: 12px !important;
+      background: #f0f0f0 !important;
+      border: 0.5px solid #e2e2e2 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-shrink: 0 !important;
+      overflow: hidden !important;
     }
-    .shi-img i { font-size: 36px; color: #aaa; opacity: 0.4; }
-    .shi-img img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
-    .shi-tc { flex: 1; min-width: 0; }
-    .shi-ti { font-size: 18px; color: #1BBFA0; margin-bottom: 0.6rem; }
-    .shi-tt { font-size: 19px; line-height: 1.25; margin-bottom: 0.9rem; color: #111; }
-    .shi-tb { font-size: 13px; line-height: 1.7; color: #444; margin-bottom: 1.25rem; }
-    .shi-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      background: #1BBFA0;
-      color: #03392D;
-      font-family: 'Poppins', sans-serif;
-      font-size: 12px;
-      font-weight: 600;
-      padding: 9px 18px;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: opacity 0.2s;
-      white-space: nowrap;
+
+    ${S} .shi-img i {
+      font-size: 36px !important;
+      color: #aaa !important;
+      opacity: 0.4 !important;
     }
-    .shi-cta:hover { opacity: 0.85; }
-    .shi-cta i { font-size: 13px; }
-    .shi-gh {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 1.25rem;
+
+    ${S} .shi-img img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      border-radius: 12px !important;
+      display: block !important;
     }
-    .shi-gh h2 { font-size: 20px; color: #111; }
-    .shi-grid-industries {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.85rem;
+
+    /* ── Text column ── */
+    ${S} .shi-tc {
+      flex: 1 !important;
+      min-width: 0 !important;
     }
-    .shi-ic { border-radius: 8px; border: 0.5px solid #e2e2e2; overflow: hidden; }
-    .shi-ip {
-      height: 90px;
-      background: #f0f0f0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
+
+    ${S} .shi-ti {
+      font-size: 20px !important;
+      color: #1BBFA0 !important;
+      margin-bottom: 0.6rem !important;
+      display: block !important;
+      line-height: 1 !important;
     }
-    .shi-ip i { font-size: 26px; color: #aaa; opacity: 0.4; }
-    .shi-ip img { width: 100%; height: 100%; object-fit: cover; }
-    .shi-il {
-      padding: 7px 10px;
-      font-size: 11.5px;
-      font-weight: 500;
-      color: #444;
-      display: flex;
-      align-items: center;
-      gap: 5px;
+
+    ${S} .shi-tt {
+      font-size: 19px !important;
+      line-height: 1.25 !important;
+      margin-bottom: 0.9rem !important;
+      color: #111 !important;
+      font-weight: 700 !important;
     }
-    .shi-il i { font-size: 13px; color: #1BBFA0; }
+
+    ${S} .shi-tb {
+      font-size: 13px !important;
+      line-height: 1.7 !important;
+      color: #444 !important;
+      margin-bottom: 1.25rem !important;
+    }
+
+    /* ── CTA button ── */
+    ${S} .shi-cta {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 7px !important;
+      background: #1BBFA0 !important;
+      color: #03392D !important;
+      font-size: 12px !important;
+      font-weight: 600 !important;
+      padding: 9px 18px !important;
+      border-radius: 6px !important;
+      text-decoration: none !important;
+      transition: opacity 0.2s !important;
+      white-space: nowrap !important;
+      line-height: 1 !important;
+      border: none !important;
+    }
+
+    ${S} .shi-cta:hover { opacity: 0.85 !important; }
+    ${S} .shi-cta i { font-size: 13px !important; }
+
+    /* ── Industry grid header ── */
+    ${S} .shi-gh {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 1rem !important;
+      flex-wrap: wrap !important;
+      margin-bottom: 1.25rem !important;
+    }
+
+    ${S} .shi-gh h2 {
+      font-size: 20px !important;
+      color: #111 !important;
+      font-weight: 700 !important;
+    }
+
+    /* ── Industry grid ── */
+    ${S} .shi-grid-industries {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 0.85rem !important;
+    }
+
+    ${S} .shi-ic {
+      border-radius: 8px !important;
+      border: 0.5px solid #e2e2e2 !important;
+      overflow: hidden !important;
+    }
+
+    ${S} .shi-ip {
+      height: 90px !important;
+      background: #f0f0f0 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      overflow: hidden !important;
+    }
+
+    ${S} .shi-ip i { font-size: 26px !important; color: #aaa !important; opacity: 0.4 !important; }
+    ${S} .shi-ip img { width: 100% !important; height: 100% !important; object-fit: cover !important; display: block !important; }
+
+    ${S} .shi-il {
+      padding: 7px 10px !important;
+      font-size: 11.5px !important;
+      font-weight: 500 !important;
+      color: #444 !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 5px !important;
+      line-height: 1.4 !important;
+    }
+
+    ${S} .shi-il i { font-size: 13px !important; color: #1BBFA0 !important; }
   `;
 
   /* ── HTML template ── */
@@ -216,7 +333,7 @@
         <p class="shi-desc">Don't get left behind—harness the power of AI to drive innovation, reduce costs, and unlock new opportunities. Automate repetitive tasks, streamline workflows, and scale smarter, all while keeping a human-in-the-loop for adaptability and precision.</p>
 
         <ul class="shi-nav" role="tablist">
-          <li class="shi-on" role="tab" aria-selected="true"  data-t="0"><i class="ti ti-bulb shi-ni" aria-hidden="true"></i>Strategic AI Consulting</li>
+          <li class="shi-on" role="tab" aria-selected="true" data-t="0"><i class="ti ti-bulb shi-ni" aria-hidden="true"></i>Strategic AI Consulting</li>
           <li role="tab" aria-selected="false" data-t="1"><i class="ti ti-layers-subtract shi-ni" aria-hidden="true"></i>AI Transformation Bundle</li>
           <li role="tab" aria-selected="false" data-t="2"><i class="ti ti-route shi-ni" aria-hidden="true"></i>AI Workflow Assessment</li>
           <li role="tab" aria-selected="false" data-t="3"><i class="ti ti-chart-arrows-vertical shi-ni" aria-hidden="true"></i>Our Approach</li>
@@ -299,15 +416,12 @@
       return;
     }
 
-    /* Inject scoped styles */
     var style = document.createElement('style');
     style.textContent = CSS;
     document.head.appendChild(style);
 
-    /* Render HTML */
     root.innerHTML = HTML;
 
-    /* Wire up tabs */
     var tabs   = root.querySelectorAll('.shi-nav li');
     var panels = root.querySelectorAll('.shi-panel');
     var cur    = 0;
