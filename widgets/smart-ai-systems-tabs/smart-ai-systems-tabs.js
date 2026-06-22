@@ -46,19 +46,19 @@
     ${S} .shi {
       display: flex !important;
       flex-direction: row !important;
-      align-items: flex-start !important;
-      min-height: 520px !important;
+      align-items: stretch !important;
+      min-height: 560px !important;
       background: transparent !important;
       width: 100% !important;
     }
 
     /* ── Sidebar ── */
     ${S} .shi-sidebar {
-      width: 260px !important;
-      min-width: 260px !important;
-      max-width: 260px !important;
+      width: 300px !important;
+      min-width: 300px !important;
+      max-width: 300px !important;
       flex-shrink: 0 !important;
-      padding: 2rem 1.25rem 1.5rem !important;
+      padding: 2rem 1.5rem 1.5rem !important;
       display: flex !important;
       flex-direction: column !important;
       background: transparent !important;
@@ -166,6 +166,10 @@
       padding: 2rem 1.75rem !important;
       overflow: hidden !important;
       background: transparent !important;
+      min-height: 560px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
     }
 
     /* ── Panels ── */
