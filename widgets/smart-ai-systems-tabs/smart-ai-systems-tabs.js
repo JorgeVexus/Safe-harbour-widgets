@@ -24,7 +24,12 @@
       text-align: left !important;
     }
 
-    ${S} { color: #111 !important; }
+    ${S} {
+      color: #111 !important;
+      width: 100% !important;
+      display: block !important;
+      overflow: hidden !important;
+    }
 
     /* reset headings completely */
     ${S} h1, ${S} h2, ${S} h3, ${S} h4 {
@@ -50,6 +55,7 @@
       min-height: 560px !important;
       background: transparent !important;
       width: 100% !important;
+      overflow: hidden !important;
     }
 
     /* ── Sidebar ── */
@@ -180,11 +186,14 @@
       flex-direction: row !important;
       align-items: center !important;
       gap: 1.75rem !important;
+      width: 100% !important;
+      min-width: 0 !important;
       animation: shi-slide-in 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
     }
 
     ${S} .shi-panel.shi-grid.shi-on {
       display: block !important;
+      width: 100% !important;
     }
 
     @keyframes shi-slide-in {
