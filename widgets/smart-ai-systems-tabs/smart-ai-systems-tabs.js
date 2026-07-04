@@ -201,9 +201,10 @@
       display: flex !important;
       flex-direction: row !important;
       align-items: center !important;
-      gap: 1.75rem !important;
+      gap: clamp(32px, 3.4vw, 64px) !important;
       justify-content: space-between !important;
       width: 100% !important;
+      min-height: 430px !important;
       min-width: 0 !important;
       animation: shi-slide-in 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
     }
@@ -220,11 +221,12 @@
 
     /* ── Image placeholder ── */
     ${S} .shi-img {
-      width: clamp(340px, 38vw, 520px) !important;
-      min-width: 300px !important;
+      flex: 0 1 48% !important;
+      width: auto !important;
+      min-width: 320px !important;
       max-width: 520px !important;
-      height: 250px !important;
-      border-radius: 12px !important;
+      height: clamp(260px, 24vw, 400px) !important;
+      border-radius: 16px !important;
       background: #f0f0f0 !important;
       border: 0.5px solid #e2e2e2 !important;
       display: flex !important;
@@ -232,6 +234,7 @@
       justify-content: center !important;
       flex-shrink: 0 !important;
       overflow: hidden !important;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25) !important;
     }
 
     ${S} .shi-img i {
@@ -244,14 +247,14 @@
       width: 100% !important;
       height: 100% !important;
       object-fit: cover !important;
-      border-radius: 12px !important;
+      border-radius: 16px !important;
       display: block !important;
     }
 
     /* ── Text column ── */
     ${S} .shi-tc {
-      flex: 0 1 38% !important;
-      max-width: 420px !important;
+      flex: 0 1 48% !important;
+      max-width: 520px !important;
       min-width: 0 !important;
     }
 
