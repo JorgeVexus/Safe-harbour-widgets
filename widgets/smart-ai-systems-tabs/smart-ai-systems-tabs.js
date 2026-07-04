@@ -133,8 +133,22 @@
       width: 14px !important;
       height: 14px !important;
       flex-shrink: 0 !important;
-      object-fit: contain !important;
       display: block !important;
+      background: #9AA6B2 !important;
+      -webkit-mask: var(--shi-icon) center / contain no-repeat !important;
+      mask: var(--shi-icon) center / contain no-repeat !important;
+      opacity: 0.8 !important;
+      transition: background 0.2s, opacity 0.2s !important;
+    }
+
+    ${S} .shi-nav li:hover .shi-ni {
+      background: #7B8794 !important;
+      opacity: 1 !important;
+    }
+
+    ${S} .shi-nav li.shi-on .shi-ni {
+      background: #1BBFA0 !important;
+      opacity: 1 !important;
     }
 
     /* ── Need help box ── */
@@ -270,7 +284,7 @@
       align-items: center !important;
       gap: 7px !important;
       background: #1BBFA0 !important;
-      color: #03392D !important;
+      color: #fff !important;
       font-size: 12px !important;
       font-weight: 600 !important;
       padding: 9px 18px !important;
@@ -283,7 +297,12 @@
     }
 
     ${S} .shi-cta:hover { opacity: 0.85 !important; }
-    ${S} .shi-cta i { font-size: 13px !important; }
+    ${S} .shi-cta img {
+      width: 12px !important;
+      height: 12px !important;
+      display: block !important;
+      flex-shrink: 0 !important;
+    }
 
     /* ── Industry grid header ── */
     ${S} .shi-gh {
@@ -351,11 +370,11 @@
         <p class="shi-desc">Don't get left behind—harness the power of AI to drive innovation, reduce costs, and unlock new opportunities. Automate repetitive tasks, streamline workflows, and scale smarter, all while keeping a human-in-the-loop for adaptability and precision.</p>
 
         <ul class="shi-nav" role="tablist">
-          <li class="shi-on" role="tab" aria-selected="true" data-t="0"><img class="shi-ni" src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba64480068d7c8f4d88_strategic%20ai%20consulting%20icon.svg" alt="" aria-hidden="true">Strategic AI Consulting</li>
-          <li role="tab" aria-selected="false" data-t="1"><img class="shi-ni" src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba5b550267ae318c7a0_ai%20transformation%20bundle%20icon.svg" alt="" aria-hidden="true">AI Transformation Bundle</li>
-          <li role="tab" aria-selected="false" data-t="2"><img class="shi-ni" src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba4585299f4854b10db_Ai%20workflow%20assesment%20icon.svg" alt="" aria-hidden="true">AI Workflow Assessment</li>
-          <li role="tab" aria-selected="false" data-t="3"><img class="shi-ni" src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba688f8dc3c9b6853c9_Our%20approach%20Icon.svg" alt="" aria-hidden="true">Our Approach</li>
-          <li role="tab" aria-selected="false" data-t="4"><img class="shi-ni" src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba4b221c183c36dbf22_Ai%20across%20industry.svg" alt="" aria-hidden="true">AI Across Your Industry</li>
+          <li class="shi-on" role="tab" aria-selected="true" data-t="0"><span class="shi-ni" style="--shi-icon: url('https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba64480068d7c8f4d88_strategic%20ai%20consulting%20icon.svg')" aria-hidden="true"></span>Strategic AI Consulting</li>
+          <li role="tab" aria-selected="false" data-t="1"><span class="shi-ni" style="--shi-icon: url('https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba5b550267ae318c7a0_ai%20transformation%20bundle%20icon.svg')" aria-hidden="true"></span>AI Transformation Bundle</li>
+          <li role="tab" aria-selected="false" data-t="2"><span class="shi-ni" style="--shi-icon: url('https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba4585299f4854b10db_Ai%20workflow%20assesment%20icon.svg')" aria-hidden="true"></span>AI Workflow Assessment</li>
+          <li role="tab" aria-selected="false" data-t="3"><span class="shi-ni" style="--shi-icon: url('https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba688f8dc3c9b6853c9_Our%20approach%20Icon.svg')" aria-hidden="true"></span>Our Approach</li>
+          <li role="tab" aria-selected="false" data-t="4"><span class="shi-ni" style="--shi-icon: url('https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba4b221c183c36dbf22_Ai%20across%20industry.svg')" aria-hidden="true"></span>AI Across Your Industry</li>
         </ul>
 
         <div class="shi-help">
@@ -372,7 +391,7 @@
             <img class="shi-ti" src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba64480068d7c8f4d88_strategic%20ai%20consulting%20icon.svg" alt="" aria-hidden="true">
             <h2 class="shi-tt">Properly Integrated AI Drives Profits, Productivity and Success</h2>
             <p class="shi-tb">Many organizations struggle to identify where AI can provide the most value. Our assessment narrows the focus to processes and workflows with maximum potential impact where AI will deliver the greatest operational and financial return.</p>
-            <a href="#" class="shi-cta">Identify High-Impact Workflows <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+            <a href="#" class="shi-cta">Identify High-Impact Workflows <img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a493869da8eb02bf63548dc_Icon%20arrow%20button.svg" alt="" aria-hidden="true"></a>
           </div>
           <div class="shi-img" aria-hidden="true"><img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/69bd7d8f4cae26139e37b652_strtegic%20ai%20consulting%20image.webp" alt=""></div>
         </div>
@@ -383,7 +402,7 @@
             <img class="shi-ti" src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba5b550267ae318c7a0_ai%20transformation%20bundle%20icon.svg" alt="" aria-hidden="true">
             <h2 class="shi-tt">Unlock Your AI Potential</h2>
             <p class="shi-tb">Is your business ready for AI? Our bundled assessment evaluates your readiness and pinpoints the most valuable AI opportunities. By identifying high-impact workflows, we create a clear roadmap for AI integration, ensuring a faster ROI and long-term scalability for your business.</p>
-            <a href="#" class="shi-cta">Accelerate Your AI Transformation <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+            <a href="#" class="shi-cta">Accelerate Your AI Transformation <img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a493869da8eb02bf63548dc_Icon%20arrow%20button.svg" alt="" aria-hidden="true"></a>
           </div>
         </div>
 
@@ -393,7 +412,7 @@
             <img class="shi-ti" src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba4585299f4854b10db_Ai%20workflow%20assesment%20icon.svg" alt="" aria-hidden="true">
             <h2 class="shi-tt">Precision Mapping for AI Success</h2>
             <p class="shi-tb">Our AI Workflow Assessment meticulously documents and analyzes key processes, delivering actionable roadmaps for AI-driven transformation and a developer-ready blueprint that accelerates your path to AI-powered optimization.</p>
-            <a href="#" class="shi-cta">Evaluate Your AI Readiness <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+            <a href="#" class="shi-cta">Evaluate Your AI Readiness <img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a493869da8eb02bf63548dc_Icon%20arrow%20button.svg" alt="" aria-hidden="true"></a>
           </div>
         </div>
 
@@ -402,7 +421,7 @@
             <img class="shi-ti" src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba688f8dc3c9b6853c9_Our%20approach%20Icon.svg" alt="" aria-hidden="true">
             <h2 class="shi-tt">Our Approach To AI Transformation</h2>
             <p class="shi-tb">We help businesses thrive by harnessing AI in a way that multiplies human potential instead of replacing it—where strategy and culture come first, workflows are redesigned, and you turn time and profit losses into a durable competitive advantage that keeps you ahead.</p>
-            <a href="#" class="shi-cta">Multiply Your Team's Potential <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+            <a href="#" class="shi-cta">Multiply Your Team's Potential <img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a493869da8eb02bf63548dc_Icon%20arrow%20button.svg" alt="" aria-hidden="true"></a>
           </div>
           <div class="shi-img" aria-hidden="true"><img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/69bd815bbdd71aa442354eab_our%20approach%20ai%20image.webp" alt=""></div>
         </div>
@@ -410,7 +429,7 @@
         <div class="shi-panel shi-grid" id="shi-p4" role="tabpanel">
           <div class="shi-gh">
             <h2>AI Across Your Industry</h2>
-            <a href="#" class="shi-cta">Find Your Industry's AI Blueprint <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+            <a href="#" class="shi-cta">Find Your Industry's AI Blueprint <img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a493869da8eb02bf63548dc_Icon%20arrow%20button.svg" alt="" aria-hidden="true"></a>
           </div>
           <div class="shi-grid-industries">
             <div class="shi-ic"><div class="shi-ip"><img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/69bd8293a63f19f47e3572c3_logistics%20%26%20supply%20chain.webp" alt=""></div><div class="shi-il"><i class="ti ti-truck" aria-hidden="true"></i>Logistics &amp; Supply Chain</div></div>
