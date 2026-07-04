@@ -55,16 +55,14 @@
       min-height: 560px !important;
       background: transparent !important;
       width: 100% !important;
-      max-width: 1180px !important;
-      margin: 0 auto !important;
       overflow: hidden !important;
     }
 
     /* ── Sidebar ── */
     ${S} .shi-sidebar {
-      width: 300px !important;
-      min-width: 300px !important;
-      max-width: 300px !important;
+      width: 25% !important;
+      min-width: 260px !important;
+      max-width: none !important;
       flex-shrink: 0 !important;
       padding: 2rem 1.5rem 1.5rem !important;
       display: flex !important;
@@ -170,9 +168,9 @@
 
     /* ── Content area ── */
     ${S} .shi-content {
-      flex: 1 !important;
+      flex: 0 0 75% !important;
       min-width: 0 !important;
-      padding: 2rem 1.75rem 2rem 1rem !important;
+      padding: 2rem 0 2rem 1.75rem !important;
       overflow: hidden !important;
       background: transparent !important;
       min-height: 560px !important;
@@ -190,14 +188,15 @@
       flex-direction: row !important;
       align-items: center !important;
       gap: 1.75rem !important;
-      width: min(100%, 760px) !important;
+      justify-content: space-between !important;
+      width: 100% !important;
       min-width: 0 !important;
       animation: shi-slide-in 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
     }
 
     ${S} .shi-panel.shi-grid.shi-on {
       display: block !important;
-      width: min(100%, 760px) !important;
+      width: 100% !important;
     }
 
     @keyframes shi-slide-in {
@@ -207,9 +206,9 @@
 
     /* ── Image placeholder ── */
     ${S} .shi-img {
-      width: 340px !important;
+      width: clamp(340px, 38vw, 520px) !important;
       min-width: 300px !important;
-      max-width: 340px !important;
+      max-width: 520px !important;
       height: 250px !important;
       border-radius: 12px !important;
       background: #f0f0f0 !important;
@@ -237,8 +236,8 @@
 
     /* ── Text column ── */
     ${S} .shi-tc {
-      flex: 0 1 340px !important;
-      max-width: 340px !important;
+      flex: 0 1 38% !important;
+      max-width: 420px !important;
       min-width: 0 !important;
     }
 
