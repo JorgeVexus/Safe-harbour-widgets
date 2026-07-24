@@ -13,7 +13,7 @@
     document.head.appendChild(el);
   }
 
-  injectLink('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+  injectLink('https://fonts.googleapis.com/css2?family=Play:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap');
   injectLink('https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css');
 
   /* ── Scoped CSS — all rules prefixed with #shi-ai-systems-root ── */
@@ -33,6 +33,7 @@
 
     /* reset headings completely */
     ${S} h1, ${S} h2, ${S} h3, ${S} h4 {
+      font-family: 'Play', sans-serif !important;
       font-weight: 700 !important;
       color: #111 !important;
       margin: 0 !important;
@@ -138,6 +139,7 @@
     }
 
     ${S} .shi-help-t {
+      font-family: 'Play', sans-serif !important;
       font-size: 14px !important;
       line-height: 1.35 !important;
       font-weight: 700 !important;
@@ -246,6 +248,7 @@
     }
 
     ${S} .shi-tt {
+      font-family: 'Play', sans-serif !important;
       font-size: clamp(20px, 1.85vw, 30px) !important;
       line-height: 1.22 !important;
       margin-bottom: 1.4rem !important;
@@ -269,8 +272,9 @@
       min-height: 40px !important;
       background: #1BBFA0 !important;
       color: #fff !important;
+      font-family: 'Play', sans-serif !important;
       font-size: 13px !important;
-      font-weight: 600 !important;
+      font-weight: 700 !important;
       padding: 10px 16px !important;
       border-radius: 8px !important;
       text-decoration: none !important;
