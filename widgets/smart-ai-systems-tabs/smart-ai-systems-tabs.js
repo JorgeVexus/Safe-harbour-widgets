@@ -335,14 +335,15 @@
 
     ${S} .shi-ic {
       border-radius: 8px !important;
-      border: 0.5px solid #e2e2e2 !important;
+      border: none !important;
+      background: transparent !important;
       overflow: hidden !important;
       text-align: left !important;
     }
 
     ${S} .shi-ip {
       height: auto !important;
-      background: #f0f0f0 !important;
+      background: transparent !important;
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
