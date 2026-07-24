@@ -64,35 +64,10 @@
       min-width: 260px !important;
       max-width: none !important;
       flex-shrink: 0 !important;
-      padding: 2rem 1.5rem 1.5rem !important;
+      padding: 0 1.5rem 1.5rem 0 !important;
       display: flex !important;
       flex-direction: column !important;
       background: transparent !important;
-    }
-
-    ${S} .shi-eyebrow {
-      font-size: 10px !important;
-      font-weight: 600 !important;
-      letter-spacing: 0.12em !important;
-      text-transform: uppercase !important;
-      color: #1BBFA0 !important;
-      margin-bottom: 0.6rem !important;
-      line-height: 1.4 !important;
-    }
-
-    ${S} .shi-heading {
-      font-size: 22px !important;
-      line-height: 1.2 !important;
-      margin-bottom: 0.75rem !important;
-      color: #111 !important;
-      font-weight: 700 !important;
-    }
-
-    ${S} .shi-desc {
-      font-size: 12px !important;
-      line-height: 1.65 !important;
-      color: #444 !important;
-      margin-bottom: 1.5rem !important;
     }
 
     /* ── Tab nav ── */
@@ -103,19 +78,20 @@
     ${S} .shi-nav li {
       display: flex !important;
       align-items: center !important;
-      gap: 9px !important;
-      padding: 0.55rem 0.75rem 0.55rem 12px !important;
-      font-size: 12.5px !important;
-      font-weight: 400 !important;
+      gap: 12px !important;
+      min-height: 56px !important;
+      padding: 0 16px !important;
+      font-size: 13px !important;
+      line-height: 1.25 !important;
+      font-weight: 500 !important;
       cursor: pointer !important;
       color: #555 !important;
-      border-left: 2px solid transparent !important;
+      border-left: 3px solid transparent !important;
       border-top: none !important;
       border-right: none !important;
       border-bottom: none !important;
-      border-radius: 0 8px 8px 0 !important;
+      border-radius: 0 10px 10px 0 !important;
       transition: color 0.2s, border-color 0.2s, background 0.2s !important;
-      line-height: 1.3 !important;
       user-select: none !important;
       background: transparent !important;
     }
@@ -125,13 +101,14 @@
     ${S} .shi-nav li.shi-on {
       color: #111 !important;
       border-left-color: #1BBFA0 !important;
-      font-weight: 500 !important;
+      font-weight: 600 !important;
       background: #f8fafc !important;
     }
 
     ${S} .shi-nav li .shi-ni {
-      width: 14px !important;
-      height: 14px !important;
+      width: 18px !important;
+      height: 18px !important;
+      flex: 0 0 18px !important;
       flex-shrink: 0 !important;
       display: block !important;
       background: #9AA6B2 !important;
@@ -153,30 +130,32 @@
 
     /* ── Need help box ── */
     ${S} .shi-help {
-      padding: 1rem !important;
+      padding: 24px !important;
       background: #f8fafc !important;
+      border: 1px solid #F1F5F9 !important;
       border-radius: 14px !important;
       margin-top: 1.25rem !important;
     }
 
     ${S} .shi-help-t {
-      font-size: 11.5px !important;
-      font-weight: 600 !important;
-      margin-bottom: 0.25rem !important;
+      font-size: 14px !important;
+      line-height: 1.35 !important;
+      font-weight: 700 !important;
+      margin-bottom: 0.45rem !important;
       color: #111 !important;
-      line-height: 1.4 !important;
     }
 
     ${S} .shi-help-b {
-      font-size: 11px !important;
-      line-height: 1.5 !important;
-      color: #555 !important;
-      margin-bottom: 0.5rem !important;
+      font-size: 12px !important;
+      line-height: 1.55 !important;
+      color: #111 !important;
+      margin-bottom: 0.75rem !important;
     }
 
     ${S} .shi-help a {
-      font-size: 11.5px !important;
+      font-size: 12px !important;
       color: #1BBFA0 !important;
+      font-weight: 700 !important;
       text-decoration: underline !important;
     }
 
@@ -259,39 +238,41 @@
     }
 
     ${S} .shi-ti {
-      width: 20px !important;
-      height: 20px !important;
-      margin-bottom: 0.6rem !important;
+      width: 38px !important;
+      height: 38px !important;
+      margin-bottom: 0.9rem !important;
       display: block !important;
       object-fit: contain !important;
     }
 
     ${S} .shi-tt {
-      font-size: 19px !important;
-      line-height: 1.25 !important;
-      margin-bottom: 0.9rem !important;
+      font-size: clamp(20px, 1.85vw, 30px) !important;
+      line-height: 1.22 !important;
+      margin-bottom: 1.4rem !important;
       color: #111 !important;
       font-weight: 700 !important;
     }
 
     ${S} .shi-tb {
-      font-size: 13px !important;
-      line-height: 1.7 !important;
-      color: #444 !important;
-      margin-bottom: 1.25rem !important;
+      font-size: 14px !important;
+      line-height: 1.65 !important;
+      color: #111 !important;
+      margin-bottom: 1.55rem !important;
     }
 
     /* ── CTA button ── */
     ${S} .shi-cta {
       display: inline-flex !important;
       align-items: center !important;
-      gap: 7px !important;
+      justify-content: center !important;
+      gap: 10px !important;
+      min-height: 40px !important;
       background: #1BBFA0 !important;
       color: #fff !important;
-      font-size: 12px !important;
+      font-size: 13px !important;
       font-weight: 600 !important;
-      padding: 9px 18px !important;
-      border-radius: 6px !important;
+      padding: 10px 16px !important;
+      border-radius: 8px !important;
       text-decoration: none !important;
       transition: opacity 0.2s !important;
       white-space: nowrap !important;
@@ -301,13 +282,17 @@
 
     ${S} .shi-cta:hover { opacity: 0.85 !important; }
     ${S} .shi-cta img {
-      width: 12px !important;
-      height: 12px !important;
+      width: 14px !important;
+      height: 14px !important;
       display: block !important;
       flex-shrink: 0 !important;
     }
 
-    /* ── Industry grid header ── */
+    /* ── Industry grid & KPI Cards ── */
+    ${S} .kpi-cards, ${S} .kpi-card, ${S} .kpi-cards *, ${S} .kpi-card * {
+      text-align: left !important;
+    }
+
     ${S} .shi-gh {
       display: flex !important;
       flex-direction: row !important;
@@ -336,6 +321,7 @@
       border-radius: 8px !important;
       border: 0.5px solid #e2e2e2 !important;
       overflow: hidden !important;
+      text-align: left !important;
     }
 
     ${S} .shi-ip {
@@ -359,6 +345,7 @@
       align-items: center !important;
       gap: 5px !important;
       line-height: 1.4 !important;
+      text-align: left !important;
     }
 
     ${S} .shi-il i { font-size: 13px !important; color: #1BBFA0 !important; }
@@ -368,10 +355,6 @@
   var HTML = `
     <div class="shi">
       <aside class="shi-sidebar">
-        <p class="shi-eyebrow">AI &amp; Automation</p>
-        <h1 class="shi-heading">Smart AI Systems</h1>
-        <p class="shi-desc">Don't get left behind—harness the power of AI to drive innovation, reduce costs, and unlock new opportunities. Automate repetitive tasks, streamline workflows, and scale smarter, all while keeping a human-in-the-loop for adaptability and precision.</p>
-
         <ul class="shi-nav" role="tablist">
           <li class="shi-on" role="tab" aria-selected="true" data-t="0"><span class="shi-ni" style="--shi-icon: url('https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba64480068d7c8f4d88_strategic%20ai%20consulting%20icon.svg')" aria-hidden="true"></span>Strategic AI Consulting</li>
           <li role="tab" aria-selected="false" data-t="1"><span class="shi-ni" style="--shi-icon: url('https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba5b550267ae318c7a0_ai%20transformation%20bundle%20icon.svg')" aria-hidden="true"></span>AI Transformation Bundle</li>
