@@ -332,7 +332,7 @@
 
     ${S} .bpc-nav li:hover {
       color: var(--bpc-primary) !important;
-      background: rgba(248,250,252,0.7) !important;
+      background: #EFF6FF !important;
     }
 
     ${S} .bpc-nav li.bpc-on {
@@ -354,7 +354,7 @@
     }
 
     ${S} .bpc-nav li:hover .bpc-nav-icon {
-      background: var(--bpc-primary) !important;
+      background: var(--bpc-accent) !important;
     }
 
     ${S} .bpc-nav li.bpc-on .bpc-nav-icon {

@@ -369,7 +369,7 @@
 
     ${S} .rit-nav li:hover {
       color: var(--rit-primary) !important;
-      background: rgba(248,250,252,0.72) !important;
+      background: #EFF6FF !important;
     }
 
     ${S} .rit-nav li.rit-on {
@@ -391,7 +391,7 @@
     }
 
     ${S} .rit-nav li:hover .rit-nav-icon {
-      background: var(--rit-primary) !important;
+      background: var(--rit-accent) !important;
     }
 
     ${S} .rit-nav li.rit-on .rit-nav-icon {

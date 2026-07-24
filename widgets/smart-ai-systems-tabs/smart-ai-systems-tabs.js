@@ -100,7 +100,10 @@
       background: transparent !important;
     }
 
-    ${S} .shi-nav li:hover { color: #111 !important; }
+    ${S} .shi-nav li:hover {
+      color: #111 !important;
+      background: #EFF6FF !important;
+    }
 
     ${S} .shi-nav li.shi-on {
       color: #111 !important;
@@ -123,7 +126,7 @@
     }
 
     ${S} .shi-nav li:hover .shi-ni {
-      background: #7B8794 !important;
+      background: #1BBFA0 !important;
       opacity: 1 !important;
     }
 
@@ -251,7 +254,9 @@
       margin-top: 0 !important;
       margin-bottom: 0.9rem !important;
       display: block !important;
-      object-fit: contain !important;
+      background: #1BBFA0 !important;
+      -webkit-mask: var(--shi-icon) center / contain no-repeat !important;
+      mask: var(--shi-icon) center / contain no-repeat !important;
     }
 
     ${S} .shi-tt {
@@ -385,7 +390,7 @@
 
         <div class="shi-panel shi-on" id="shi-p0" role="tabpanel">
           <div class="shi-tc">
-            <img class="shi-ti" src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba64480068d7c8f4d88_strategic%20ai%20consulting%20icon.svg" alt="" aria-hidden="true">
+            <span class="shi-ti" style="--shi-icon: url('https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba64480068d7c8f4d88_strategic%20ai%20consulting%20icon.svg')" aria-hidden="true"></span>
             <h2 class="shi-tt">Properly Integrated AI Drives Profits, Productivity and Success</h2>
             <p class="shi-tb">Many organizations struggle to identify where AI can provide the most value. Our assessment narrows the focus to processes and workflows with maximum potential impact where AI will deliver the greatest operational and financial return.</p>
             <a href="#" class="shi-cta">Identify High-Impact Workflows <img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a493869da8eb02bf63548dc_Icon%20arrow%20button.svg" alt="" aria-hidden="true"></a>
@@ -396,7 +401,7 @@
         <div class="shi-panel" id="shi-p1" role="tabpanel">
           <div class="shi-img" aria-hidden="true"><img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/69bd7fe891b12561f09d862f_ai%20workflow%20assestment%20image.webp" alt=""></div>
           <div class="shi-tc">
-            <img class="shi-ti" src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba5b550267ae318c7a0_ai%20transformation%20bundle%20icon.svg" alt="" aria-hidden="true">
+            <span class="shi-ti" style="--shi-icon: url('https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba5b550267ae318c7a0_ai%20transformation%20bundle%20icon.svg')" aria-hidden="true"></span>
             <h2 class="shi-tt">Unlock Your AI Potential</h2>
             <p class="shi-tb">Is your business ready for AI? Our bundled assessment evaluates your readiness and pinpoints the most valuable AI opportunities. By identifying high-impact workflows, we create a clear roadmap for AI integration, ensuring a faster ROI and long-term scalability for your business.</p>
             <a href="#" class="shi-cta">Accelerate Your AI Transformation <img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a493869da8eb02bf63548dc_Icon%20arrow%20button.svg" alt="" aria-hidden="true"></a>
@@ -406,7 +411,7 @@
         <div class="shi-panel" id="shi-p2" role="tabpanel">
           <div class="shi-img" aria-hidden="true"><img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/69bd7ed84459f56bb58e187f_ai%20transformation%20bundle%20image.webp" alt=""></div>
           <div class="shi-tc">
-            <img class="shi-ti" src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba4585299f4854b10db_Ai%20workflow%20assesment%20icon.svg" alt="" aria-hidden="true">
+            <span class="shi-ti" style="--shi-icon: url('https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba4585299f4854b10db_Ai%20workflow%20assesment%20icon.svg')" aria-hidden="true"></span>
             <h2 class="shi-tt">Precision Mapping for AI Success</h2>
             <p class="shi-tb">Our AI Workflow Assessment meticulously documents and analyzes key processes, delivering actionable roadmaps for AI-driven transformation and a developer-ready blueprint that accelerates your path to AI-powered optimization.</p>
             <a href="#" class="shi-cta">Evaluate Your AI Readiness <img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a493869da8eb02bf63548dc_Icon%20arrow%20button.svg" alt="" aria-hidden="true"></a>
@@ -415,7 +420,7 @@
 
         <div class="shi-panel" id="shi-p3" role="tabpanel">
           <div class="shi-tc">
-            <img class="shi-ti" src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba688f8dc3c9b6853c9_Our%20approach%20Icon.svg" alt="" aria-hidden="true">
+            <span class="shi-ti" style="--shi-icon: url('https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba688f8dc3c9b6853c9_Our%20approach%20Icon.svg')" aria-hidden="true"></span>
             <h2 class="shi-tt">Our Approach To AI Transformation</h2>
             <p class="shi-tb">We help businesses thrive by harnessing AI in a way that multiplies human potential instead of replacing it—where strategy and culture come first, workflows are redesigned, and you turn time and profit losses into a durable competitive advantage that keeps you ahead.</p>
             <a href="#" class="shi-cta">Multiply Your Team's Potential <img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a493869da8eb02bf63548dc_Icon%20arrow%20button.svg" alt="" aria-hidden="true"></a>
