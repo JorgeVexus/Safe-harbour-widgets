@@ -101,7 +101,7 @@
 
     ${S} .ts-slider-section {
       width: 100% !important;
-      padding: clamp(40px, 6vw, 80px) 0 !important;
+      padding: 20px 0 !important;
       background: #ffffff !important;
       font-family: 'Poppins', sans-serif !important;
     }

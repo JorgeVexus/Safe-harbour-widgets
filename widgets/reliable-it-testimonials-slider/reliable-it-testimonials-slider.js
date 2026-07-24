@@ -90,7 +90,7 @@
 
     ${S} .ts-section {
       width: 100% !important;
-      padding: clamp(24px, 3.5vw, 48px) 0 !important;
+      padding: 20px 0 !important;
       background: #ffffff !important;
       font-family: 'Poppins', sans-serif !important;
     }
