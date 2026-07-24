@@ -53,7 +53,7 @@
       display: flex !important;
       flex-direction: row !important;
       align-items: stretch !important;
-      min-height: 560px !important;
+      min-height: auto !important;
       background: transparent !important;
       width: 100% !important;
       overflow: hidden !important;
@@ -65,7 +65,7 @@
       min-width: 260px !important;
       max-width: none !important;
       flex-shrink: 0 !important;
-      padding: 0 1.5rem 1.5rem 0 !important;
+      padding: 0 1.5rem 0.75rem 0 !important;
       display: flex !important;
       flex-direction: column !important;
       background: transparent !important;
@@ -171,10 +171,10 @@
     ${S} .shi-content {
       flex: 0 0 75% !important;
       min-width: 0 !important;
-      padding: 0 0 2rem 1.75rem !important;
+      padding: 0 0 1rem 1.75rem !important;
       overflow: hidden !important;
       background: transparent !important;
-      min-height: 560px !important;
+      min-height: auto !important;
       display: flex !important;
       flex-direction: column !important;
       justify-content: flex-start !important;
@@ -191,7 +191,7 @@
       gap: clamp(32px, 3.4vw, 64px) !important;
       justify-content: space-between !important;
       width: 100% !important;
-      min-height: 430px !important;
+      min-height: auto !important;
       min-width: 0 !important;
       animation: shi-slide-in 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
     }

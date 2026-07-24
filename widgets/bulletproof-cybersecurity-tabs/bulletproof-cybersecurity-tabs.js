@@ -128,8 +128,8 @@
     ${S} .bpc {
       position: relative !important;
       width: 100% !important;
-      min-height: 560px !important;
-      padding: 3rem 0 !important;
+      min-height: auto !important;
+      padding: 3rem 0 1.5rem 0 !important;
       background: #fff !important;
       overflow: hidden !important;
       font-family: 'Poppins', sans-serif !important;
@@ -193,7 +193,7 @@
       justify-content: space-between !important;
       gap: clamp(32px, 3.4vw, 64px) !important;
       width: 100% !important;
-      min-height: 430px !important;
+      min-height: auto !important;
     }
 
     ${S} .bpc-panel.bpc-on {
