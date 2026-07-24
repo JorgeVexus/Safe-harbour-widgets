@@ -157,8 +157,8 @@
     ${S} .ts-viewport {
       width: 100% !important;
       overflow: hidden !important;
-      padding: 24px 40px !important;
-      margin: -24px -40px !important;
+      padding: 32px 40px !important;
+      margin: -32px -40px !important;
     }
 
     ${S} .ts-track {
@@ -176,32 +176,32 @@
       background: #ffffff !important;
       border: 0.5px solid var(--ts-border) !important;
       border-radius: 12px !important;
-      box-shadow: 0px 4px 3px rgba(40, 125, 152, 0.2), 0px 10px 7.5px rgba(40, 125, 152, 0.2) !important;
+      box-shadow: 0px 4px 3px rgba(40, 125, 152, 0.15), 0px 10px 7.5px rgba(40, 125, 152, 0.15) !important;
       position: relative !important;
       transition: transform 0.25s ease, box-shadow 0.25s ease !important;
     }
 
     ${S} .ts-card:hover {
       transform: translateY(-4px) !important;
-      box-shadow: 0px 8px 12px rgba(40, 125, 152, 0.25), 0px 18px 24px rgba(40, 125, 152, 0.2) !important;
+      box-shadow: 0px 8px 12px rgba(40, 125, 152, 0.2), 0px 18px 24px rgba(40, 125, 152, 0.15) !important;
     }
 
     ${S} .ts-card-inner {
-      padding: 20px 25px !important;
+      padding: 24px 28px !important;
       display: flex !important;
       flex-direction: column !important;
       justify-content: space-between !important;
-      min-height: 380px !important;
+      min-height: 250px !important;
       height: 100% !important;
       position: relative !important;
     }
 
     ${S} .ts-quote-icon {
       position: absolute !important;
-      top: -24px !important;
-      right: 20px !important;
-      width: 62px !important;
-      height: 51px !important;
+      top: -16px !important;
+      right: 24px !important;
+      width: 44px !important;
+      height: 36px !important;
       color: var(--ts-secondary) !important;
       z-index: 2 !important;
       pointer-events: none !important;
@@ -210,56 +210,56 @@
     ${S} .ts-content-top {
       display: flex !important;
       flex-direction: column !important;
-      gap: 11px !important;
+      gap: 10px !important;
     }
 
     ${S} .ts-card-title {
       font-family: 'Play', sans-serif !important;
-      font-size: 20px !important;
+      font-size: 16px !important;
       font-weight: 700 !important;
-      line-height: 25px !important;
+      line-height: 1.35 !important;
       color: var(--ts-text-dark) !important;
     }
 
     ${S} .ts-stars {
       display: flex !important;
-      gap: 0 !important;
+      gap: 2px !important;
       color: var(--ts-secondary) !important;
     }
 
     ${S} .ts-stars svg {
-      width: 24px !important;
-      height: 24px !important;
+      width: 18px !important;
+      height: 18px !important;
       fill: currentColor !important;
     }
 
     ${S} .ts-card-body {
       font-family: 'Poppins', sans-serif !important;
-      font-size: 18px !important;
+      font-size: 13.5px !important;
       font-weight: 400 !important;
-      line-height: 29.25px !important;
+      line-height: 1.6 !important;
       color: var(--ts-text-body) !important;
     }
 
     ${S} .ts-card-footer {
       display: flex !important;
       align-items: center !important;
-      gap: 12px !important;
-      margin-top: 24px !important;
+      gap: 10px !important;
+      margin-top: 18px !important;
     }
 
     ${S} .ts-role {
       font-family: 'Play', sans-serif !important;
-      font-size: 16px !important;
+      font-size: 12.5px !important;
       font-weight: 700 !important;
-      line-height: 25px !important;
+      line-height: 1.3 !important;
       color: var(--ts-text-dark) !important;
       text-transform: uppercase !important;
     }
 
     ${S} .ts-bullet {
-      width: 9px !important;
-      height: 9px !important;
+      width: 7px !important;
+      height: 7px !important;
       background-color: var(--ts-secondary) !important;
       border-radius: 50% !important;
       flex-shrink: 0 !important;
@@ -267,9 +267,9 @@
 
     ${S} .ts-company {
       font-family: 'Poppins', sans-serif !important;
-      font-size: 14px !important;
+      font-size: 12.5px !important;
       font-weight: 400 !important;
-      line-height: 25px !important;
+      line-height: 1.3 !important;
       color: var(--ts-text-body) !important;
     }
 

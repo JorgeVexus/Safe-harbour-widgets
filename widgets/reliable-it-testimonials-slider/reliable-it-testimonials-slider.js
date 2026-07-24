@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var ROOT_ID = 'shi-smart-ai-testimonials-slider-root';
+  var ROOT_ID = 'shi-reliable-it-testimonials-slider-root';
   var S = '#' + ROOT_ID;
 
   function injectLink(href) {
@@ -20,25 +20,18 @@
 
   var testimonials = [
     {
-      title: '"What used to take hours... now happens automatically—saving us over 120 hours a month."',
+      title: '"A \'quick fix\' from our IT team gave a hacker administrative access to our entire network."',
       rating: 5,
-      body: 'Safe Harbour\'s AI solutions transformed our accounting operations. Bookkeeping time dropped by 60%, accuracy improved, and our team is now empowered to focus on higher-value advisory work. Their solutions have truly elevated our business.',
-      role: 'CFO',
-      company: 'Mid-Sized Accounting Firm'
+      body: 'An employee was granted temporary admin access that was never revoked, bypassing all controls. Months later, a phishing attack through that account led to a massive breach. Safe Harbour helped us implement proper policies and auditing to ensure a simple mistake can never expose our company to that level of risk again.',
+      role: 'CHIEF FINANCIAL OFFICER',
+      company: '(CFO)'
     },
     {
-      title: '"AI transformed our operations—ROI was undeniable! 50% productivity boost and 30% cost savings in just six months!"',
+      title: '"We thought our IT team and insurance had us covered. We were wrong."',
       rating: 5,
-      body: 'By implementing Safe Harbour\'s AI solutions to automate scheduling and optimize inventory, we cut our equipment downtime by 40%. Their AI-driven quality control also significantly reduced waste, making us more competitive than ever.',
-      role: 'OWNER',
-      company: 'Manufacturing Partner'
-    },
-    {
-      title: '"AI shouldn\'t be a threat—it should be a tool for growth, creativity, and innovation."',
-      rating: 5,
-      body: 'We recently participated in an incredible AI Training Workshop with Safe Harbour Informatics. The focus was on giving our team hands-on AI skills to amplify their value, not replace it. At a time when AI integration often signals job cuts, this was a bold reminder that the smartest investment is in your people.',
-      role: 'BUILD TEAM',
-      company: 'Design company'
+      body: 'We dismissed a security assessment, only to face a crisis when our IT manager took medical leave during a breach. Safe Harbour provided the strategic oversight we were missing, proving that relying on an overworked internal team without certified external auditing is a risk no business can afford.',
+      role: 'BUSINESS OWNER',
+      company: 'Logistics Firm'
     }
   ];
 
@@ -79,7 +72,7 @@
 
     ${S} {
       --ts-primary: #0E182C;
-      --ts-secondary: #2EC8A1; /* Green accent color */
+      --ts-secondary: #E08332; /* Orange accent color for Reliable IT Services */
       --ts-text-dark: #0E182C;
       --ts-text-body: #000000;
       --ts-border: #D7D7D7;
@@ -101,7 +94,7 @@
 
     ${S} .ts-slider-section {
       width: 100% !important;
-      padding: clamp(40px, 6vw, 80px) 0 !important;
+      padding: clamp(24px, 3.5vw, 48px) 0 !important;
       background: #ffffff !important;
       font-family: 'Poppins', sans-serif !important;
     }
@@ -117,7 +110,7 @@
       justify-content: flex-end !important;
       align-items: center !important;
       width: 100% !important;
-      margin-bottom: clamp(24px, 4vw, 40px) !important;
+      margin-bottom: clamp(16px, 3vw, 24px) !important;
     }
 
     ${S} .ts-controls {
@@ -176,14 +169,14 @@
       background: #ffffff !important;
       border: 0.5px solid var(--ts-border) !important;
       border-radius: 12px !important;
-      box-shadow: 0px 4px 3px rgba(40, 125, 152, 0.15), 0px 10px 7.5px rgba(40, 125, 152, 0.15) !important;
+      box-shadow: 0px 4px 3px rgba(224, 131, 50, 0.15), 0px 10px 7.5px rgba(224, 131, 50, 0.15) !important;
       position: relative !important;
       transition: transform 0.25s ease, box-shadow 0.25s ease !important;
     }
 
     ${S} .ts-card:hover {
       transform: translateY(-4px) !important;
-      box-shadow: 0px 8px 12px rgba(40, 125, 152, 0.2), 0px 18px 24px rgba(40, 125, 152, 0.15) !important;
+      box-shadow: 0px 8px 12px rgba(224, 131, 50, 0.2), 0px 18px 24px rgba(224, 131, 50, 0.15) !important;
     }
 
     ${S} .ts-card-inner {
@@ -278,7 +271,7 @@
       align-items: center !important;
       justify-content: center !important;
       gap: 16px !important;
-      margin-top: 28px !important;
+      margin-top: 24px !important;
     }
 
     ${S} .ts-dot {
@@ -311,14 +304,14 @@
         min-height: auto !important;
       }
       ${S} .ts-quote-icon {
-        width: 46px !important;
-        height: 38px !important;
-        top: -18px !important;
-        right: 15px !important;
+        width: 38px !important;
+        height: 30px !important;
+        top: -14px !important;
+        right: 18px !important;
       }
       ${S} .ts-card-body {
-        font-size: 16px !important;
-        line-height: 26px !important;
+        font-size: 13px !important;
+        line-height: 1.55 !important;
       }
     }
   `;
@@ -336,7 +329,7 @@
         <div class="ts-viewport">
           <div class="ts-track">
             ${testimonialMarkup(testimonials[1])}
-            ${testimonialMarkup(testimonials[2])}
+            ${testimonialMarkup(testimonials[0])}
             ${testimonials.map(testimonialMarkup).join('')}
             ${testimonialMarkup(testimonials[0])}
             ${testimonialMarkup(testimonials[1])}
@@ -354,17 +347,8 @@
     return parseFloat(styles.columnGap || styles.gap || 0) || 0;
   }
 
-  function getVisibleCount(root) {
-    var viewport = root.querySelector('.ts-viewport');
-    var first = root.querySelector('.ts-card');
-    if (!viewport || !first) return 1;
-    var gap = getGap(root);
-    return Math.max(1, (viewport.clientWidth + gap) / (first.offsetWidth + gap));
-  }
-
   function mountSlider(root) {
     var track = root.querySelector('.ts-track');
-    var viewport = root.querySelector('.ts-viewport');
     var items = root.querySelectorAll('.ts-card');
     var prev = root.querySelector('.ts-prev');
     var next = root.querySelector('.ts-next');
