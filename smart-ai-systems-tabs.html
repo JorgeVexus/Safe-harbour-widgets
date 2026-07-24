@@ -85,10 +85,11 @@
       background: #f8fafc;
       border: 1px solid #F1F5F9;
       border-radius: 14px;
-      margin-top: 1.25rem;
+      margin-top: 12px;
     }
 
     .shi-help-t {
+      font-family: 'Play', sans-serif;
       font-size: 14px;
       font-weight: 700;
       margin-bottom: 0.45rem;
@@ -113,10 +114,14 @@
     /* ── Content area ── */
     .shi-content {
       flex: 1;
-      padding: 2rem 1.75rem;
+      padding: 0 0 2rem 1.75rem;
       overflow: hidden;
       position: relative;
       background: transparent;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
     }
 
     /* ── Panels ── */
@@ -124,7 +129,7 @@
 
     .shi-panel.on {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 1.75rem;
       animation: sib 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     }

@@ -189,7 +189,7 @@
 
     ${S} .bpc-panel {
       display: none !important;
-      align-items: center !important;
+      align-items: flex-start !important;
       justify-content: space-between !important;
       gap: clamp(32px, 3.4vw, 64px) !important;
       width: 100% !important;
@@ -216,6 +216,7 @@
       overflow: hidden !important;
       background: #0E182C !important;
       box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25) !important;
+      margin-top: 0 !important;
     }
 
     ${S} .bpc-media img {
@@ -236,12 +237,15 @@
       flex: 0 1 48% !important;
       max-width: 520px !important;
       min-width: 0 !important;
+      margin-top: 0 !important;
+      padding-top: 0 !important;
     }
 
     ${S} .bpc-panel-icon {
       width: 38px !important;
       height: 38px !important;
       display: block !important;
+      margin-top: 0 !important;
       margin-bottom: 0.9rem !important;
       background: var(--bpc-accent) !important;
       -webkit-mask: var(--bpc-icon) center / contain no-repeat !important;
@@ -305,7 +309,7 @@
       display: flex !important;
       flex-direction: column !important;
       gap: 8px !important;
-      margin-bottom: 21px !important;
+      margin-bottom: 12px !important;
     }
 
     ${S} .bpc-nav li {

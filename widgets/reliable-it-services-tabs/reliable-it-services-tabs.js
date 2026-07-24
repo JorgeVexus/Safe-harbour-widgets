@@ -227,7 +227,7 @@
 
     ${S} .rit-panel {
       display: none !important;
-      align-items: center !important;
+      align-items: flex-start !important;
       justify-content: space-between !important;
       gap: clamp(32px, 3.4vw, 64px) !important;
       width: 100% !important;
@@ -248,6 +248,8 @@
       flex: 0 1 48% !important;
       max-width: 520px !important;
       min-width: 0 !important;
+      margin-top: 0 !important;
+      padding-top: 0 !important;
     }
 
     ${S} .rit-media {
@@ -260,6 +262,7 @@
       overflow: hidden !important;
       background: #0E182C !important;
       box-shadow: 0 25px 50px -12px rgba(14,24,44,0.25) !important;
+      margin-top: 0 !important;
     }
 
     ${S} .rit-media img {
@@ -280,6 +283,7 @@
       width: 38px !important;
       height: 38px !important;
       display: block !important;
+      margin-top: 0 !important;
       margin-bottom: 0.9rem !important;
       background: var(--rit-accent) !important;
       -webkit-mask: var(--rit-icon) center / contain no-repeat !important;
@@ -288,19 +292,19 @@
 
     ${S} .rit-panel-title {
       font-family: 'Play', sans-serif !important;
-      font-size: clamp(22px, 1.85vw, 30px) !important;
-      line-height: 1.16 !important;
+      font-size: clamp(20px, 1.85vw, 30px) !important;
+      line-height: 1.22 !important;
       font-weight: 700 !important;
       color: var(--rit-primary) !important;
-      margin-bottom: 1.25rem !important;
+      margin-bottom: 1.4rem !important;
     }
 
     ${S} .rit-panel-body {
       font-size: 14px !important;
-      line-height: 1.62 !important;
+      line-height: 1.65 !important;
       font-weight: 500 !important;
       color: #111 !important;
-      margin-bottom: 1.65rem !important;
+      margin-bottom: 1.55rem !important;
     }
 
     ${S} .rit-cta {
@@ -342,7 +346,7 @@
       display: flex !important;
       flex-direction: column !important;
       gap: 8px !important;
-      margin-bottom: 36px !important;
+      margin-bottom: 12px !important;
     }
 
     ${S} .rit-nav li {

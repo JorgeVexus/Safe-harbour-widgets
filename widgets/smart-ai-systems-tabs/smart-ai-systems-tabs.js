@@ -135,7 +135,7 @@
       background: #f8fafc !important;
       border: 1px solid #F1F5F9 !important;
       border-radius: 14px !important;
-      margin-top: 1.25rem !important;
+      margin-top: 12px !important;
     }
 
     ${S} .shi-help-t {
@@ -165,13 +165,13 @@
     ${S} .shi-content {
       flex: 0 0 75% !important;
       min-width: 0 !important;
-      padding: 2rem 0 2rem 1.75rem !important;
+      padding: 0 0 2rem 1.75rem !important;
       overflow: hidden !important;
       background: transparent !important;
       min-height: 560px !important;
       display: flex !important;
       flex-direction: column !important;
-      justify-content: center !important;
+      justify-content: flex-start !important;
       align-items: flex-start !important;
     }
 
@@ -181,7 +181,7 @@
     ${S} .shi-panel.shi-on {
       display: flex !important;
       flex-direction: row !important;
-      align-items: center !important;
+      align-items: flex-start !important;
       gap: clamp(32px, 3.4vw, 64px) !important;
       justify-content: space-between !important;
       width: 100% !important;
@@ -216,6 +216,7 @@
       flex-shrink: 0 !important;
       overflow: hidden !important;
       box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25) !important;
+      margin-top: 0 !important;
     }
 
     ${S} .shi-img i {
@@ -237,11 +238,14 @@
       flex: 0 1 48% !important;
       max-width: 520px !important;
       min-width: 0 !important;
+      margin-top: 0 !important;
+      padding-top: 0 !important;
     }
 
     ${S} .shi-ti {
       width: 38px !important;
       height: 38px !important;
+      margin-top: 0 !important;
       margin-bottom: 0.9rem !important;
       display: block !important;
       object-fit: contain !important;
