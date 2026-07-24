@@ -73,7 +73,10 @@
 
     /* ── Tab nav ── */
     ${S} .shi-nav {
-      flex: 1 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 8px !important;
+      margin-bottom: 12px !important;
     }
 
     ${S} .shi-nav li {
@@ -135,7 +138,7 @@
       background: #f8fafc !important;
       border: 1px solid #F1F5F9 !important;
       border-radius: 14px !important;
-      margin-top: 12px !important;
+      margin-top: 0 !important;
     }
 
     ${S} .shi-help-t {
