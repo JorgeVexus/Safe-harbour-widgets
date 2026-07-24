@@ -139,12 +139,11 @@
       position: relative !important;
       width: min(100%, 1536px) !important;
       margin: 0 auto !important;
-      padding: 0 24px !important;
+      padding: 0 24px 0 0 !important;
     }
 
     ${S} .bpc-header {
-      width: min(100%, 760px) !important;
-      margin-bottom: 2.6rem !important;
+      display: none !important;
     }
 
     ${S} .bpc-eyebrow {
@@ -428,12 +427,6 @@
   var HTML = `
     <section class="bpc">
       <div class="bpc-inner">
-        <header class="bpc-header">
-          <p class="bpc-eyebrow">Cybersecurity</p>
-          <h1 class="bpc-heading">Bulletproof Cybersecurity</h1>
-          <p class="bpc-desc">Robust security is the launchpad for innovation. It's the unshakable confidence that allows you to pursue aggressive growth and lead your business towards an AI-powered future landscape, and empower your team without constantly looking over your shoulder.</p>
-        </header>
-
         <div class="bpc-layout">
           <div class="bpc-content">
             ${panelsHTML}

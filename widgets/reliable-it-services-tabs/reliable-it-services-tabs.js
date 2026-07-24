@@ -171,12 +171,11 @@
     ${S} .rit-inner {
       width: min(100%, 1536px) !important;
       margin: 0 auto !important;
-      padding: 0 24px !important;
+      padding: 0 24px 0 0 !important;
     }
 
     ${S} .rit-header {
-      width: min(100%, 790px) !important;
-      margin-bottom: clamp(42px, 4vw, 72px) !important;
+      display: none !important;
     }
 
     ${S} .rit-eyebrow {
@@ -569,12 +568,6 @@
   var HTML = `
     <section class="rit">
       <div class="rit-inner">
-        <header class="rit-header">
-          <p class="rit-eyebrow">Managed IT Services</p>
-          <h1 class="rit-heading">Reliable IT Services</h1>
-          <p class="rit-desc">Reliable IT isn't just about fixing things when they break. It's a proactive partnership: 24/7 monitoring, strategic planning, and expert support that prevent problems before they impact your business, creating a stable, worry-free platform for growth.</p>
-        </header>
-
         <div class="rit-layout">
           <aside class="rit-rail">
             <ul class="rit-nav" role="tablist">
