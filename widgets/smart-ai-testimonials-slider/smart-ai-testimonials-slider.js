@@ -107,7 +107,7 @@
     }
 
     ${S} .ts-inner {
-      width: min(100%, 1500px) !important;
+      width: min(100%, 1400px) !important;
       margin: 0 auto !important;
       padding: 0 24px !important;
     }
@@ -170,8 +170,9 @@
     }
 
     ${S} .ts-card {
-      flex: 0 0 679px !important;
-      width: 679px !important;
+      flex: 0 0 calc((100% - 28px) / 2) !important;
+      width: calc((100% - 28px) / 2) !important;
+      max-width: calc((100% - 28px) / 2) !important;
       background: #ffffff !important;
       border: 0.5px solid var(--ts-border) !important;
       border-radius: 12px !important;
@@ -303,6 +304,7 @@
       ${S} .ts-card {
         flex: 0 0 100% !important;
         width: 100% !important;
+        max-width: 100% !important;
       }
       ${S} .ts-card-inner {
         padding: 20px 20px !important;
