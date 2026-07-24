@@ -88,11 +88,7 @@
       padding: 0 !important;
     }
 
-    ${S} button {
-      font: inherit !important;
-    }
-
-    ${S} .ts-slider-section {
+    ${S} .ts-section {
       width: 100% !important;
       padding: clamp(24px, 3.5vw, 48px) 0 !important;
       background: #ffffff !important;
@@ -105,48 +101,6 @@
       padding: 0 24px !important;
     }
 
-    ${S} .ts-header-line {
-      display: flex !important;
-      justify-content: flex-end !important;
-      align-items: center !important;
-      width: 100% !important;
-      margin-bottom: clamp(16px, 3vw, 24px) !important;
-    }
-
-    ${S} .ts-controls {
-      display: flex !important;
-      align-items: center !important;
-      gap: 10px !important;
-    }
-
-    ${S} .ts-btn {
-      width: 42px !important;
-      height: 42px !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      border: 1px solid #E2E8F0 !important;
-      border-radius: 999px !important;
-      background: #ffffff !important;
-      color: var(--ts-primary) !important;
-      box-shadow: 0 12px 22px rgba(15,23,42,0.11) !important;
-      cursor: pointer !important;
-      font-size: 24px !important;
-      line-height: 1 !important;
-      transition: transform 0.2s, opacity 0.2s, background-color 0.2s !important;
-      user-select: none !important;
-    }
-
-    ${S} .ts-btn:hover {
-      opacity: 0.9 !important;
-      transform: translateY(-1px) !important;
-      background-color: #F8FAFC !important;
-    }
-
-    ${S} .ts-btn:active {
-      transform: translateY(0) !important;
-    }
-
     ${S} .ts-viewport {
       width: 100% !important;
       overflow: hidden !important;
@@ -154,12 +108,11 @@
       margin: -32px -40px !important;
     }
 
-    ${S} .ts-track {
+    ${S} .ts-grid {
       display: flex !important;
+      flex-direction: row !important;
       gap: 28px !important;
-      transform: translate3d(0, 0, 0) !important;
-      transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
-      will-change: transform !important;
+      width: 100% !important;
     }
 
     ${S} .ts-card {
@@ -266,33 +219,13 @@
       color: var(--ts-text-body) !important;
     }
 
-    ${S} .ts-dots {
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      gap: 16px !important;
-      margin-top: 24px !important;
-    }
-
-    ${S} .ts-dot {
-      width: 8px !important;
-      height: 8px !important;
-      display: block !important;
-      border: 0 !important;
-      border-radius: 999px !important;
-      background: rgba(14, 24, 44, 0.3) !important;
-      cursor: pointer !important;
-      padding: 0 !important;
-      transition: background-color 0.2s !important;
-    }
-
-    ${S} .ts-dot.ts-on {
-      background: var(--ts-secondary) !important;
-    }
-
     @media (max-width: 768px) {
       ${S} .ts-inner {
         padding: 0 16px !important;
+      }
+      ${S} .ts-grid {
+        flex-direction: column !important;
+        gap: 20px !important;
       }
       ${S} .ts-card {
         flex: 0 0 100% !important;
@@ -317,112 +250,16 @@
   `;
 
   var HTML = `
-    <section class="ts-slider-section">
+    <section class="ts-section">
       <div class="ts-inner">
-        <header class="ts-header-line">
-          <div class="ts-controls">
-            <button class="ts-btn ts-prev" type="button" aria-label="Previous testimonial">&lsaquo;</button>
-            <button class="ts-btn ts-next" type="button" aria-label="Next testimonial">&rsaquo;</button>
-          </div>
-        </header>
-
         <div class="ts-viewport">
-          <div class="ts-track">
-            ${testimonialMarkup(testimonials[1])}
-            ${testimonialMarkup(testimonials[0])}
+          <div class="ts-grid">
             ${testimonials.map(testimonialMarkup).join('')}
-            ${testimonialMarkup(testimonials[0])}
-            ${testimonialMarkup(testimonials[1])}
           </div>
         </div>
-
-        <div class="ts-dots" data-dots></div>
       </div>
     </section>
   `;
-
-  function getGap(root) {
-    var track = root.querySelector('.ts-track');
-    var styles = window.getComputedStyle(track);
-    return parseFloat(styles.columnGap || styles.gap || 0) || 0;
-  }
-
-  function mountSlider(root) {
-    var track = root.querySelector('.ts-track');
-    var items = root.querySelectorAll('.ts-card');
-    var prev = root.querySelector('.ts-prev');
-    var next = root.querySelector('.ts-next');
-    var dotsWrap = root.querySelector('[data-dots]');
-
-    var N = testimonials.length;
-    var index = 2;
-    var isTransitioning = false;
-
-    function buildDots() {
-      var html = '';
-      for (var i = 0; i < N; i += 1) {
-        var isActive = ((index - 2 + N) % N) === i;
-        html += '<button class="ts-dot' + (isActive ? ' ts-on' : '') + '" type="button" aria-label="Go to testimonial slide ' + (i + 1) + '" data-slide="' + (i + 2) + '"></button>';
-      }
-      dotsWrap.innerHTML = html;
-      dotsWrap.querySelectorAll('.ts-dot').forEach(function (dot) {
-        dot.addEventListener('click', function () {
-          if (isTransitioning) return;
-          index = parseInt(this.dataset.slide, 10);
-          update(true);
-        });
-      });
-    }
-
-    function update(animated) {
-      if (animated === false) {
-        track.style.transition = 'none';
-      } else {
-        track.style.transition = 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
-        isTransitioning = true;
-      }
-
-      var gap = getGap(root);
-      var itemWidth = items[0].offsetWidth;
-      var translateValue = -index * (itemWidth + gap);
-      track.style.setProperty('transform', 'translate3d(' + translateValue + 'px, 0, 0)', 'important');
-
-      var activeDotIndex = (index - 2 + N) % N;
-      dotsWrap.querySelectorAll('.ts-dot').forEach(function (dot, dotIndex) {
-        dot.classList.toggle('ts-on', dotIndex === activeDotIndex);
-      });
-    }
-
-    track.addEventListener('transitionend', function () {
-      isTransitioning = false;
-      if (index < 2) {
-        index = index + N;
-        update(false);
-      } else if (index >= 2 + N) {
-        index = index - N;
-        update(false);
-      }
-    });
-
-    prev.addEventListener('click', function () {
-      if (isTransitioning) return;
-      index = index - 1;
-      update(true);
-    });
-
-    next.addEventListener('click', function () {
-      if (isTransitioning) return;
-      index = index + 1;
-      update(true);
-    });
-
-    window.addEventListener('resize', function () {
-      update(false);
-    });
-
-    buildDots();
-    update(false);
-  }
 
   function mount() {
     var root = document.getElementById(ROOT_ID);
@@ -439,7 +276,6 @@
     }
 
     root.innerHTML = HTML;
-    mountSlider(root);
   }
 
   if (document.readyState === 'loading') {
