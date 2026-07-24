@@ -235,7 +235,6 @@
         '<h2 class="aia-panel-title">KEY BENEFITS</h2>' +
         '<div class="aia-benefit-grid">' + benefitCards.map(smallInfoCard).join('') + '</div>' +
         '<div class="aia-benefits-image"><img src="' + KEY_BENEFITS_IMAGE + '" alt=""></div>' +
-        '<div class="aia-dots aia-static-dots"><span class="aia-dot aia-on"></span><span class="aia-dot"></span><span class="aia-dot"></span></div>' +
       '</div>'
     );
   }
