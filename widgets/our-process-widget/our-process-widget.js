@@ -57,8 +57,8 @@
     ${S} .process-section-embed .process-header {
       text-align: center !important;
       margin-bottom: 80px !important;
-      opacity: 0 !important;
-      transform: translateY(30px) !important;
+      opacity: 0;
+      transform: translateY(30px);
       animation: shiProcessFadeInUp 0.8s forwards !important;
     }
 
@@ -107,8 +107,8 @@
       text-align: center !important;
       position: relative !important;
       z-index: 2 !important;
-      opacity: 0 !important;
-      transform: translateY(40px) !important;
+      opacity: 0;
+      transform: translateY(40px);
     }
 
     ${S} .process-section-embed .process-step:nth-child(1) { animation: shiProcessFadeInUp 0.8s 0.2s forwards !important; }
