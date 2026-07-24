@@ -341,7 +341,7 @@
     }
 
     ${S} .shi-ip {
-      height: 90px !important;
+      height: auto !important;
       background: #f0f0f0 !important;
       display: flex !important;
       align-items: center !important;
@@ -350,21 +350,7 @@
     }
 
     ${S} .shi-ip i { font-size: 26px !important; color: #aaa !important; opacity: 0.4 !important; }
-    ${S} .shi-ip img { width: 100% !important; height: 100% !important; object-fit: cover !important; display: block !important; }
-
-    ${S} .shi-il {
-      padding: 7px 10px !important;
-      font-size: 11.5px !important;
-      font-weight: 500 !important;
-      color: #444 !important;
-      display: flex !important;
-      align-items: center !important;
-      gap: 5px !important;
-      line-height: 1.4 !important;
-      text-align: left !important;
-    }
-
-    ${S} .shi-il i { font-size: 13px !important; color: #1BBFA0 !important; }
+    ${S} .shi-ip img { width: 100% !important; height: auto !important; object-fit: cover !important; display: block !important; }
   `;
 
   /* ── HTML template ── */
@@ -434,12 +420,12 @@
             <a href="#" class="shi-cta">Find Your Industry's AI Blueprint <img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a493869da8eb02bf63548dc_Icon%20arrow%20button.svg" alt="" aria-hidden="true"></a>
           </div>
           <div class="shi-grid-industries">
-            <div class="shi-ic"><div class="shi-ip"><img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/69bd8293a63f19f47e3572c3_logistics%20%26%20supply%20chain.webp" alt=""></div><div class="shi-il"><i class="ti ti-truck" aria-hidden="true"></i>Logistics &amp; Supply Chain</div></div>
-            <div class="shi-ic"><div class="shi-ip"><img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/69bd8293e9bee729cd2b1d24_retail%20%26%20ecommerce.webp" alt=""></div><div class="shi-il"><i class="ti ti-shopping-cart" aria-hidden="true"></i>Retail &amp; E-commerce</div></div>
-            <div class="shi-ic"><div class="shi-ip"><img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/69bd82934e9f0e1e149ca86b_finance.webp" alt=""></div><div class="shi-il"><i class="ti ti-coin" aria-hidden="true"></i>Finance</div></div>
-            <div class="shi-ic"><div class="shi-ip"><img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/69bd82936fa1f3aab1a03d39_Manufacturing.webp" alt=""></div><div class="shi-il"><i class="ti ti-settings-2" aria-hidden="true"></i>Manufacturing</div></div>
-            <div class="shi-ic"><div class="shi-ip"><img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/69bd8293c30a0daddbcfa3fb_skilled%20trades.webp" alt=""></div><div class="shi-il"><i class="ti ti-tool" aria-hidden="true"></i>Skilled Trades &amp; Field Services</div></div>
-            <div class="shi-ic"><div class="shi-ip"><img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/69bd8293f904be53df6d3894_healthcare.webp" alt=""></div><div class="shi-il"><i class="ti ti-heart-rate-monitor" aria-hidden="true"></i>Healthcare</div></div>
+            <div class="shi-ic"><div class="shi-ip"><img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a63a8284960aede89e3f25f_Container.svg" alt=""></div></div>
+            <div class="shi-ic"><div class="shi-ip"><img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a63a828fc1677fb3a46ecfa_image.svg" alt=""></div></div>
+            <div class="shi-ic"><div class="shi-ip"><img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a63a828a5b1517c8d7ece29_Container%20(1).svg" alt=""></div></div>
+            <div class="shi-ic"><div class="shi-ip"><img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a63a8284960aede89e3f298_Container%20(2).svg" alt=""></div></div>
+            <div class="shi-ic"><div class="shi-ip"><img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a63a8282f0e1836f3fdc676_image%20(1).svg" alt=""></div></div>
+            <div class="shi-ic"><div class="shi-ip"><img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a63a828bca5e7f40c855b3a_image%20(2).svg" alt=""></div></div>
           </div>
         </div>
 
