@@ -40,7 +40,7 @@
       font-family: 'Poppins', sans-serif !important;
       background-color: var(--bg-white) !important;
       color: var(--dark-blue) !important;
-      padding: 60px 20px !important;
+      padding: 100px 20px !important;
       overflow: hidden !important;
       display: flex !important;
       flex-direction: column !important;
@@ -56,9 +56,9 @@
 
     ${S} .process-section-embed .process-header {
       text-align: center !important;
-      margin-bottom: 60px !important;
-      opacity: 0;
-      transform: translateY(30px);
+      margin-bottom: 80px !important;
+      opacity: 0 !important;
+      transform: translateY(30px) !important;
       animation: shiProcessFadeInUp 0.8s forwards !important;
     }
 
@@ -70,12 +70,12 @@
       letter-spacing: 2px !important;
       text-transform: uppercase !important;
       display: block !important;
-      margin-bottom: 16px !important;
+      margin-bottom: 20px !important;
     }
 
     ${S} .process-section-embed .process-heading {
       font-family: 'Play', sans-serif !important;
-      font-size: clamp(32px, 4vw, 48px) !important;
+      font-size: 48px !important;
       font-weight: 700 !important;
       color: var(--dark-blue) !important;
       line-height: 1.2 !important;
@@ -107,8 +107,8 @@
       text-align: center !important;
       position: relative !important;
       z-index: 2 !important;
-      opacity: 0;
-      transform: translateY(40px);
+      opacity: 0 !important;
+      transform: translateY(40px) !important;
     }
 
     ${S} .process-section-embed .process-step:nth-child(1) { animation: shiProcessFadeInUp 0.8s 0.2s forwards !important; }
@@ -209,10 +209,10 @@
     }
 
     @media (max-width: 991px) {
-      ${S} .process-section-embed { padding: 50px 20px !important; }
+      ${S} .process-section-embed { padding: 80px 20px !important; }
       ${S} .process-section-embed .process-steps {
         flex-direction: column !important;
-        gap: 50px !important;
+        gap: 60px !important;
       }
       ${S} .process-section-embed .process-steps::before { display: none !important; }
       ${S} .process-section-embed .process-heading { font-size: 36px !important; }
@@ -239,7 +239,7 @@
 
         <div class="process-steps">
 
-          <div class="process-step" data-step="0">
+          <div class="process-step">
             <div class="icon-wrapper">
               <div class="icon-bg"></div>
               <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -252,7 +252,7 @@
             <p class="step-description">We start by identifying the 'low-hanging fruit'—the areas where AI can deliver the fastest and largest return on investment.</p>
           </div>
 
-          <div class="process-step" data-step="1">
+          <div class="process-step">
             <div class="icon-wrapper">
               <div class="icon-bg"></div>
               <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -266,7 +266,7 @@
             <p class="step-description">We provide a clear, step-by-step plan that shows you exactly how we'll implement the solutions without disrupting your operations.</p>
           </div>
 
-          <div class="process-step" data-step="2">
+          <div class="process-step">
             <div class="icon-wrapper">
               <div class="icon-bg"></div>
               <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -290,8 +290,6 @@
     var steps = root.querySelectorAll('.process-step');
     if (!steps || steps.length === 0) return;
 
-    var currentStep = 0;
-
     function resetSteps() {
       steps.forEach(function (step) {
         step.classList.remove('is-active');
@@ -299,28 +297,19 @@
     }
 
     function runSequence() {
-      // Step 0 active
       resetSteps();
-      currentStep = 0;
       steps[0].classList.add('is-active');
 
-      // Step 1 active (accumulate)
       setTimeout(function () {
-        currentStep = 1;
         steps[1].classList.add('is-active');
       }, 1800);
 
-      // Step 2 active (accumulate - all 3 active)
       setTimeout(function () {
-        currentStep = 2;
         steps[2].classList.add('is-active');
       }, 3600);
     }
 
-    // Initial start
     runSequence();
-
-    // Loop every 6.2 seconds
     setInterval(runSequence, 6200);
   }
 
