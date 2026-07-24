@@ -275,7 +275,7 @@
     }
 
     ${S} .aia-inner {
-      width: min(100%, 1536px) !important;
+      width: min(100%, 1400px) !important;
       margin: 0 auto !important;
       padding: 0 24px !important;
     }
@@ -305,6 +305,7 @@
     ${S} .aia-content {
       flex: 1 1 75% !important;
       min-width: 0 !important;
+      width: 100% !important;
     }
 
     ${S} .aia-nav {
@@ -402,12 +403,14 @@
 
     ${S} .aia-panel {
       display: none !important;
+      width: 100% !important;
       min-height: 610px !important;
       animation: aia-rise 0.38s cubic-bezier(0.22, 1, 0.36, 1) both !important;
     }
 
     ${S} .aia-panel.aia-on {
       display: block !important;
+      width: 100% !important;
     }
 
     @keyframes aia-rise {
@@ -425,19 +428,21 @@
       margin-bottom: 44px !important;
     }
 
-    ${S} .aia-why-grid, ${S} .aia-benefit-grid {
+    ${S} .aia-why-grid {
       display: grid !important;
       grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-      column-gap: clamp(48px, 7vw, 170px) !important;
+      column-gap: 42px !important;
       row-gap: 36px !important;
       width: 100% !important;
     }
 
     ${S} .aia-benefit-grid {
+      display: grid !important;
       grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
       column-gap: 42px !important;
       row-gap: 36px !important;
       margin-bottom: 42px !important;
+      width: 100% !important;
     }
 
     ${S} .aia-info-card {
@@ -465,7 +470,7 @@
 
     ${S} .aia-info-card > p {
       padding-left: 64px !important;
-      max-width: 470px !important;
+      max-width: none !important;
       font-size: 14px !important;
       line-height: 1.45 !important;
       font-weight: 400 !important;
