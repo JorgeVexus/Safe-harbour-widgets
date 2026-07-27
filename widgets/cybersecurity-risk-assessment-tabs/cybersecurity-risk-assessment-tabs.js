@@ -219,20 +219,23 @@
     ${S} .cra-layout {
       display: flex !important;
       align-items: flex-start !important;
-      gap: clamp(42px, 5vw, 86px) !important;
+      gap: 50px !important;
       width: 100% !important;
+      min-width: 100% !important;
+      box-sizing: border-box !important;
     }
 
     ${S} .cra-rail {
-      flex: 0 0 25% !important;
-      min-width: 260px !important;
-      max-width: 356px !important;
+      flex: 0 0 300px !important;
+      width: 300px !important;
+      min-width: 300px !important;
+      max-width: 300px !important;
     }
 
     ${S} .cra-content {
-      flex: 1 1 75% !important;
+      flex: 1 1 0% !important;
+      width: calc(100% - 350px) !important;
       min-width: 0 !important;
-      width: 100% !important;
     }
 
     ${S} .cra-nav {
