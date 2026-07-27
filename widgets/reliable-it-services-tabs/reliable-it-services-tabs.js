@@ -222,6 +222,7 @@
     ${S} .rit-content {
       flex: 1 1 75% !important;
       min-width: 0 !important;
+      width: 100% !important;
     }
 
     ${S} .rit-panel {

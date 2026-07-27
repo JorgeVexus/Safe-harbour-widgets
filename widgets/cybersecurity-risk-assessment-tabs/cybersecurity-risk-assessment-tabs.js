@@ -232,6 +232,7 @@
     ${S} .cra-content {
       flex: 1 1 75% !important;
       min-width: 0 !important;
+      width: 100% !important;
     }
 
     ${S} .cra-nav {
@@ -330,6 +331,7 @@
 
     ${S} .cra-panel {
       display: none !important;
+      width: 100% !important;
       min-height: 560px !important;
       animation: cra-rise 0.38s cubic-bezier(0.22, 1, 0.36, 1) both !important;
     }

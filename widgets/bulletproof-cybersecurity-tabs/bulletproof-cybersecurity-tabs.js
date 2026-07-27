@@ -181,9 +181,16 @@
       width: 100% !important;
     }
 
+    ${S} .bpc-rail {
+      flex: 0 0 25% !important;
+      min-width: 260px !important;
+      max-width: 356px !important;
+    }
+
     ${S} .bpc-content {
-      flex: 1 1 auto !important;
+      flex: 1 1 75% !important;
       min-width: 0 !important;
+      width: 100% !important;
     }
 
     ${S} .bpc-panel {

@@ -722,6 +722,11 @@
 
     buildDots();
     update();
+
+    return {
+      buildDots: buildDots,
+      update: update
+    };
   }
 
   function mount() {
@@ -744,7 +749,7 @@
     var panels = root.querySelectorAll('.awp-panel');
     var cur = 0;
 
-    mountSlider(root);
+    var sliderCtrl = mountSlider(root);
 
     nav.forEach(function (tab) {
       tab.addEventListener('click', function () {
@@ -764,6 +769,11 @@
         panel.offsetHeight;
         panel.style.animation = '';
         panel.classList.add('awp-on');
+
+        if (sliderCtrl) {
+          sliderCtrl.buildDots();
+          sliderCtrl.update();
+        }
 
         if (window.matchMedia('(max-width: 980px)').matches) {
           requestAnimationFrame(function () {

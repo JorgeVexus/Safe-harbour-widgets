@@ -88,6 +88,37 @@
         'Clear recommendations. Showcase actionable next steps for immediate execution and long-term AI adoption.',
         'Readiness + opportunity alignment. Create a cohesive roadmap that ties readiness gaps to high-impact opportunities, ensuring efficient and effective AI transformation.'
       ]
+    },
+    {
+      title: 'AI Feasibility Scorecard',
+      image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a6776e014c2aede17f8e948_ai%20scorecard.webp',
+      bullets: [
+        'Score workflows based on feasibility, complexity, cost, and expected results.',
+        'Receive clear recommendations on priority initiatives aligned with business goals.'
+      ]
+    },
+    {
+      title: 'Custom AI Roadmap',
+      image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a6776df3adb393cd3c8ad1e_custom%20ai%20road.webp',
+      bullets: [
+        'Get a tailored roadmap with immediate, mid-term, and long-term AI opportunities.',
+        'Set action plans for piloting and scaling AI solutions.'
+      ]
+    },
+    {
+      title: 'Executive Reporting & Insights',
+      image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a6776e1022ac1891de9f1d2_executive%20reporting.webp',
+      bullets: [
+        'Present findings in an easy-to-understand executive summary tailored to leadership.',
+        "Ensure alignment on next steps for the organization's AI strategy."
+      ]
+    },
+    {
+      title: 'Optional Post-Assessment Support',
+      image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a6776e0b49070922e900554_optional%20assessment.webp',
+      bullets: [
+        'Access optional implementation, training, and custom AI development to bring recommendations to life.'
+      ]
     }
   ];
 
@@ -184,12 +215,14 @@
           '<h2 class="atb-panel-title">WHAT&#39;S INCLUDED IN THE AI TRANSFORMATION BUNDLE?</h2>' +
           '<p>The AI Opportunity Assessment provides your organization with a clear framework to identify and prioritize AI-driven opportunities. Here is what is included:</p>' +
         '</div>' +
-        '<div class="atb-mobile-slider" data-mobile-slider>' +
-          '<div class="atb-mobile-viewport">' +
-            '<div class="atb-include-grid">' + includeCards.map(includeCard).join('') + '</div>' +
+        '<div class="atb-slider" data-slider>' +
+          '<button class="atb-slider-btn atb-prev" type="button" aria-label="Previous slide">&lsaquo;</button>' +
+          '<div class="atb-slider-viewport">' +
+            '<div class="atb-slider-track">' + includeCards.map(includeCard).join('') + '</div>' +
           '</div>' +
-          '<div class="atb-mobile-dots" data-mobile-dots></div>' +
+          '<button class="atb-slider-btn atb-next" type="button" aria-label="Next slide">&rsaquo;</button>' +
         '</div>' +
+        '<div class="atb-dots" data-dots></div>' +
       '</div>'
     );
   }
@@ -227,6 +260,7 @@
     }
 
     ${S} ul { list-style: none !important; }
+    ${S} button { font: inherit !important; }
 
     ${S} .atb {
       width: 100% !important;
@@ -430,18 +464,26 @@
       mask: var(--atb-check) center / contain no-repeat !important;
     }
 
-    ${S} .atb-include-grid {
-      display: grid !important;
-      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-      gap: 21px !important;
+    ${S} .atb-slider {
+      position: relative !important;
       width: 100% !important;
     }
 
-    ${S} .atb-mobile-dots {
-      display: none !important;
+    ${S} .atb-slider-viewport {
+      width: 100% !important;
+      overflow: hidden !important;
+    }
+
+    ${S} .atb-slider-track {
+      display: flex !important;
+      gap: 21px !important;
+      transform: translate3d(0,0,0) !important;
+      transition: transform 0.42s cubic-bezier(0.22, 1, 0.36, 1) !important;
+      will-change: transform !important;
     }
 
     ${S} .atb-include-card {
+      flex: 0 0 calc((100% - 42px) / 3) !important;
       min-width: 0 !important;
       border-radius: 10px !important;
       overflow: hidden !important;
@@ -449,7 +491,7 @@
     }
 
     ${S} .atb-include-image {
-      height: clamp(220px, 17vw, 270px) !important;
+      height: clamp(190px, 16vw, 270px) !important;
       overflow: hidden !important;
       background: #E2E8F0 !important;
     }
@@ -500,13 +542,61 @@
       color: var(--atb-muted) !important;
     }
 
+    ${S} .atb-slider-btn {
+      position: absolute !important;
+      top: 50% !important;
+      z-index: 2 !important;
+      width: 42px !important;
+      height: 42px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      border: 1px solid #E2E8F0 !important;
+      border-radius: 999px !important;
+      background: #fff !important;
+      color: var(--atb-primary) !important;
+      box-shadow: 0 12px 22px rgba(15,23,42,0.12) !important;
+      cursor: pointer !important;
+      transform: translateY(-50%) !important;
+      transition: transform 0.2s, opacity 0.2s !important;
+    }
+
+    ${S} .atb-slider-btn:hover {
+      opacity: 0.9 !important;
+      transform: translateY(-50%) scale(1.04) !important;
+    }
+
+    ${S} .atb-prev { left: -20px !important; }
+    ${S} .atb-next { right: -20px !important; }
+
+    ${S} .atb-dots {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 22px !important;
+      margin-top: 42px !important;
+    }
+
+    ${S} .atb-dot {
+      width: 8px !important;
+      height: 8px !important;
+      display: block !important;
+      border: 0 !important;
+      border-radius: 999px !important;
+      background: rgba(14,24,44,0.3) !important;
+      cursor: pointer !important;
+      padding: 0 !important;
+    }
+
+    ${S} .atb-dot.atb-on {
+      background: var(--atb-accent) !important;
+    }
+
     @media (max-width: 1180px) {
       ${S} .atb-layout { gap: 34px !important; }
       ${S} .atb-rail { min-width: 240px !important; }
       ${S} .atb-two-grid { column-gap: 36px !important; }
-      ${S} .atb-include-grid { grid-template-columns: 1fr !important; }
-      ${S} .atb-include-card { display: grid !important; grid-template-columns: 40% 60% !important; }
-      ${S} .atb-include-image { height: auto !important; min-height: 260px !important; }
+      ${S} .atb-include-card { flex-basis: calc((100% - 21px) / 2) !important; }
     }
 
     @media (max-width: 980px) {
@@ -526,42 +616,9 @@
       ${S} .atb-nav, ${S} .atb-two-grid { grid-template-columns: 1fr !important; }
       ${S} .atb-panel-title { margin-bottom: 26px !important; }
       ${S} .atb-info-card > p { padding-left: 0 !important; }
-      ${S} .atb-mobile-viewport { overflow: hidden !important; width: 100% !important; }
-      ${S} .atb-mobile-slider .atb-include-grid {
-        display: flex !important;
-        grid-template-columns: none !important;
-        gap: 16px !important;
-        transform: translate3d(0,0,0) !important;
-        transition: transform 0.42s cubic-bezier(0.22, 1, 0.36, 1) !important;
-        will-change: transform !important;
-      }
-      ${S} .atb-include-card { display: block !important; }
-      ${S} .atb-mobile-slider .atb-include-card {
-        flex: 0 0 100% !important;
-        min-width: 0 !important;
-      }
-      ${S} .atb-include-image { height: 230px !important; min-height: 0 !important; }
-      ${S} .atb-include-copy { min-height: 0 !important; }
-      ${S} .atb-mobile-dots {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 16px !important;
-        margin-top: 24px !important;
-      }
-      ${S} .atb-mobile-dot {
-        width: 8px !important;
-        height: 8px !important;
-        display: block !important;
-        border: 0 !important;
-        border-radius: 999px !important;
-        background: rgba(14,24,44,0.3) !important;
-        cursor: pointer !important;
-        padding: 0 !important;
-      }
-      ${S} .atb-mobile-dot.atb-on {
-        background: var(--atb-accent) !important;
-      }
+      ${S} .atb-include-card { flex-basis: 100% !important; }
+      ${S} .atb-slider-btn { display: none !important; }
+      ${S} .atb-dots { margin-top: 24px !important; }
     }
   `;
 
@@ -590,52 +647,81 @@
     </section>
   `;
 
-  function mountMobileSlider(root) {
-    var slider = root.querySelector('[data-mobile-slider]');
+  function getVisibleCount() {
+    if (window.matchMedia('(max-width: 720px)').matches) return 1;
+    if (window.matchMedia('(max-width: 1180px)').matches) return 2;
+    return 3;
+  }
+
+  function mountSlider(root) {
+    var slider = root.querySelector('[data-slider]');
     if (!slider) return;
 
-    var track = slider.querySelector('.atb-include-grid');
+    var track = slider.querySelector('.atb-slider-track');
     var cards = slider.querySelectorAll('.atb-include-card');
-    var dotsWrap = slider.querySelector('[data-mobile-dots]');
+    var prev = slider.querySelector('.atb-prev');
+    var next = slider.querySelector('.atb-next');
+    var dotsWrap = root.querySelector('[data-dots]');
     var index = 0;
 
-    function isMobile() {
-      return window.matchMedia('(max-width: 720px)').matches;
+    function maxIndex() {
+      return Math.max(0, cards.length - getVisibleCount());
     }
 
     function buildDots() {
+      var pages = maxIndex() + 1;
       var html = '';
-      for (var i = 0; i < cards.length; i += 1) {
-        html += '<button class="atb-mobile-dot' + (i === index ? ' atb-on' : '') + '" type="button" aria-label="Go to card ' + (i + 1) + '" data-card="' + i + '"></button>';
+      for (var i = 0; i < pages; i += 1) {
+        html += '<button class="atb-dot' + (i === index ? ' atb-on' : '') + '" type="button" aria-label="Go to slide group ' + (i + 1) + '" data-slide="' + i + '"></button>';
       }
       dotsWrap.innerHTML = html;
-      dotsWrap.querySelectorAll('.atb-mobile-dot').forEach(function (dot) {
+      dotsWrap.querySelectorAll('.atb-dot').forEach(function (dot) {
         dot.addEventListener('click', function () {
-          index = parseInt(this.dataset.card, 10);
+          index = parseInt(this.dataset.slide, 10);
           update();
         });
       });
     }
 
     function update() {
-      if (!isMobile()) {
-        track.style.removeProperty('transform');
-        return;
-      }
+      var visible = getVisibleCount();
+      var gap = 21;
+      var viewportWidth = slider.querySelector('.atb-slider-viewport').clientWidth;
+      var cardWidth = (viewportWidth - gap * (visible - 1)) / visible;
+      index = Math.max(0, Math.min(index, maxIndex()));
+      track.style.setProperty('transform', 'translate3d(' + (-index * (cardWidth + gap)) + 'px, 0, 0)', 'important');
 
-      var gap = 16;
-      var viewportWidth = slider.querySelector('.atb-mobile-viewport').clientWidth;
-      index = Math.max(0, Math.min(index, cards.length - 1));
-      track.style.setProperty('transform', 'translate3d(' + (-index * (viewportWidth + gap)) + 'px, 0, 0)', 'important');
-
-      dotsWrap.querySelectorAll('.atb-mobile-dot').forEach(function (dot, dotIndex) {
+      dotsWrap.querySelectorAll('.atb-dot').forEach(function (dot, dotIndex) {
         dot.classList.toggle('atb-on', dotIndex === index);
       });
     }
 
+    if (prev) {
+      prev.addEventListener('click', function () {
+        index = index <= 0 ? maxIndex() : index - 1;
+        update();
+      });
+    }
+
+    if (next) {
+      next.addEventListener('click', function () {
+        index = index >= maxIndex() ? 0 : index + 1;
+        update();
+      });
+    }
+
+    window.addEventListener('resize', function () {
+      buildDots();
+      update();
+    });
+
     buildDots();
     update();
-    window.addEventListener('resize', update);
+
+    return {
+      buildDots: buildDots,
+      update: update
+    };
   }
 
   function mount() {
@@ -658,7 +744,7 @@
     var panels = root.querySelectorAll('.atb-panel');
     var cur = 0;
 
-    mountMobileSlider(root);
+    var sliderCtrl = mountSlider(root);
 
     nav.forEach(function (tab) {
       tab.addEventListener('click', function () {
@@ -678,6 +764,11 @@
         panel.offsetHeight;
         panel.style.animation = '';
         panel.classList.add('atb-on');
+
+        if (sliderCtrl) {
+          sliderCtrl.buildDots();
+          sliderCtrl.update();
+        }
 
         if (window.matchMedia('(max-width: 980px)').matches) {
           requestAnimationFrame(function () {

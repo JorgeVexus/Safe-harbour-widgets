@@ -255,6 +255,7 @@
     ${S} .ftc-content {
       flex: 1 1 75% !important;
       min-width: 0 !important;
+      width: 100% !important;
     }
 
     ${S} .ftc-nav {
@@ -318,6 +319,7 @@
 
     ${S} .ftc-panel {
       display: none !important;
+      width: 100% !important;
       min-height: 560px !important;
       animation: ftc-rise 0.38s cubic-bezier(0.22, 1, 0.36, 1) both !important;
     }
@@ -665,6 +667,11 @@
 
     buildDots();
     update();
+
+    return {
+      buildDots: buildDots,
+      update: update
+    };
   }
 
   function mount() {
@@ -687,7 +694,7 @@
     var panels = root.querySelectorAll('.ftc-panel');
     var cur = 0;
 
-    mountSlider(root);
+    var sliderCtrl = mountSlider(root);
 
     nav.forEach(function (tab) {
       tab.addEventListener('click', function () {
@@ -707,6 +714,11 @@
         panel.offsetHeight;
         panel.style.animation = '';
         panel.classList.add('ftc-on');
+
+        if (sliderCtrl) {
+          sliderCtrl.buildDots();
+          sliderCtrl.update();
+        }
 
         if (window.matchMedia('(max-width: 980px)').matches) {
           requestAnimationFrame(function () {

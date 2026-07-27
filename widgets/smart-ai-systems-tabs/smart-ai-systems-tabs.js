@@ -62,10 +62,10 @@
 
     /* ── Sidebar ── */
     ${S} .shi-sidebar {
+      flex: 0 0 25% !important;
       width: 25% !important;
       min-width: 260px !important;
-      max-width: none !important;
-      flex-shrink: 0 !important;
+      max-width: 356px !important;
       padding: 0 1.5rem 0.75rem 0 !important;
       display: flex !important;
       flex-direction: column !important;
@@ -170,8 +170,9 @@
 
     /* ── Content area ── */
     ${S} .shi-content {
-      flex: 0 0 75% !important;
+      flex: 1 1 75% !important;
       min-width: 0 !important;
+      width: 100% !important;
       padding: 0 0 1rem 1.75rem !important;
       overflow: hidden !important;
       background: transparent !important;

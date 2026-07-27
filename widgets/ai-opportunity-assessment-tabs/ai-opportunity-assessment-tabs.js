@@ -274,7 +274,7 @@
     }
 
     ${S} .aia-inner {
-      width: min(100%, 1400px) !important;
+      width: min(100%, 1536px) !important;
       margin: 0 auto !important;
       padding: 0 24px !important;
     }

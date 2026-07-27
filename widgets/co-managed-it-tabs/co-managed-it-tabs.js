@@ -214,6 +214,7 @@
     ${S} .cmi-content {
       flex: 1 1 75% !important;
       min-width: 0 !important;
+      width: 100% !important;
     }
 
     ${S} .cmi-nav {
@@ -269,6 +270,7 @@
 
     ${S} .cmi-panel {
       display: none !important;
+      width: 100% !important;
       min-height: 640px !important;
       animation: cmi-rise 0.38s cubic-bezier(0.22, 1, 0.36, 1) both !important;
     }
