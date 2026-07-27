@@ -88,6 +88,37 @@
         'Clear recommendations. Showcase actionable next steps for immediate execution and long-term AI adoption.',
         'Readiness + opportunity alignment. Create a cohesive roadmap that ties readiness gaps to high-impact opportunities, ensuring efficient and effective AI transformation.'
       ]
+    },
+    {
+      title: 'AI Feasibility Scorecard',
+      image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a6776e014c2aede17f8e948_ai%20scorecard.webp',
+      bullets: [
+        'Score workflows based on feasibility, complexity, cost, and expected results.',
+        'Receive clear recommendations on priority initiatives aligned with business goals.'
+      ]
+    },
+    {
+      title: 'Custom AI Roadmap',
+      image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a6776df3adb393cd3c8ad1e_custom%20ai%20road.webp',
+      bullets: [
+        'Get a tailored roadmap with immediate, mid-term, and long-term AI opportunities.',
+        'Set action plans for piloting and scaling AI solutions.'
+      ]
+    },
+    {
+      title: 'Executive Reporting & Insights',
+      image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a6776e1022ac1891de9f1d2_executive%20reporting.webp',
+      bullets: [
+        'Present findings in an easy-to-understand executive summary tailored to leadership.',
+        "Ensure alignment on next steps for the organization's AI strategy."
+      ]
+    },
+    {
+      title: 'Optional Post-Assessment Support',
+      image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a6776e0b49070922e900554_optional%20assessment.webp',
+      bullets: [
+        'Access optional implementation, training, and custom AI development to bring recommendations to life.'
+      ]
     }
   ];
 
