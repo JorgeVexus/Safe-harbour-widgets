@@ -284,6 +284,7 @@
     ${S} .cxp-content {
       flex: 1 1 75% !important;
       min-width: 0 !important;
+      width: 100% !important;
     }
 
     ${S} .cxp-nav {
@@ -339,6 +340,7 @@
 
     ${S} .cxp-panel {
       display: none !important;
+      width: 100% !important;
       min-height: 560px !important;
       animation: cxp-rise 0.38s cubic-bezier(0.22, 1, 0.36, 1) both !important;
     }
@@ -672,6 +674,11 @@
 
     buildDots();
     update();
+
+    return {
+      buildDots: buildDots,
+      update: update
+    };
   }
 
   function mount() {
@@ -694,7 +701,7 @@
     var panels = root.querySelectorAll('.cxp-panel');
     var cur = 0;
 
-    mountSlider(root);
+    var sliderCtrl = mountSlider(root);
 
     nav.forEach(function (tab) {
       tab.addEventListener('click', function () {
@@ -714,6 +721,11 @@
         panel.offsetHeight;
         panel.style.animation = '';
         panel.classList.add('cxp-on');
+
+        if (sliderCtrl) {
+          sliderCtrl.buildDots();
+          sliderCtrl.update();
+        }
 
         if (window.matchMedia('(max-width: 980px)').matches) {
           requestAnimationFrame(function () {

@@ -183,13 +183,14 @@
 
     ${S} .aes-rail {
       flex: 0 0 25% !important;
-      min-width: 280px !important;
-      max-width: 379px !important;
+      min-width: 260px !important;
+      max-width: 356px !important;
     }
 
     ${S} .aes-content {
       flex: 1 1 75% !important;
       min-width: 0 !important;
+      width: 100% !important;
     }
 
     ${S} .aes-nav {
@@ -229,6 +230,7 @@
 
     ${S} .aes-panel {
       display: none !important;
+      width: 100% !important;
       min-height: 600px !important;
       animation: aes-rise 0.38s cubic-bezier(0.22, 1, 0.36, 1) both !important;
     }
