@@ -55,7 +55,8 @@
       align-items: stretch !important;
       min-height: auto !important;
       background: transparent !important;
-      width: 100% !important;
+      width: min(100%, 1400px) !important;
+      margin: 0 auto !important;
       overflow: hidden !important;
     }
 

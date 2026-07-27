@@ -237,7 +237,7 @@
     }
 
     ${S} .atb-inner {
-      width: min(100%, 1536px) !important;
+      width: min(100%, 1400px) !important;
       margin: 0 auto !important;
       padding: 0 24px !important;
     }
@@ -280,6 +280,7 @@
     ${S} .atb-content {
       flex: 1 1 75% !important;
       min-width: 0 !important;
+      width: 100% !important;
     }
 
     ${S} .atb-nav {
@@ -335,12 +336,14 @@
 
     ${S} .atb-panel {
       display: none !important;
+      width: 100% !important;
       min-height: 640px !important;
       animation: atb-rise 0.38s cubic-bezier(0.22, 1, 0.36, 1) both !important;
     }
 
     ${S} .atb-panel.atb-on {
       display: block !important;
+      width: 100% !important;
     }
 
     @keyframes atb-rise {
@@ -380,7 +383,7 @@
     ${S} .atb-two-grid {
       display: grid !important;
       grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-      column-gap: clamp(48px, 7vw, 170px) !important;
+      column-gap: 42px !important;
       row-gap: 36px !important;
       width: 100% !important;
     }
@@ -410,7 +413,7 @@
 
     ${S} .atb-info-card > p {
       padding-left: 64px !important;
-      max-width: 470px !important;
+      max-width: none !important;
       font-size: 14px !important;
       line-height: 1.45 !important;
       font-weight: 400 !important;
