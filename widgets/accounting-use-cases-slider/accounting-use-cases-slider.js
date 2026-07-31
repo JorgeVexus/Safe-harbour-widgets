@@ -18,36 +18,59 @@
     {
       title: 'Accounts Receivable (A/R)',
       image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a20610ff6ad35fc4aa3412a_ar.webp',
-      body: 'Automated invoice generation to accelerate collections and reduce DSO, featuring real-time AI payment matching and reconciliation.'
+      body: 'Automate invoice generation to improve collections and reduce DSO. Match payments with customer invoices in real time using AI-based reconciliation.'
     },
     {
       title: 'Accounts Payable (A/P)',
       image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a20636dbfb40ec99c1ce7b2_accounts%20playable.webp',
-      body: 'Identify and prevent fraudulent vendor activity or duplicate invoices with automated approval workflows built for global payment terms.'
+      body: [
+        'Identify and prevent fraudulent vendors or duplicate invoices, ensuring compliance and security.',
+        'Streamline invoice approvals with automated workflows designed for global payment terms.'
+      ]
     },
     {
       title: 'Bank Reconciliations',
       image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a20636d57a7449ad9b06938_bank%20reconciliations.webp',
-      body: 'Automatically pinpoint unmatched transactions or duplicate entries, generating audit-ready reconciliation reports instantly.'
+      body: [
+        'Automatically identify and flag mismatched transactions or duplicate entries for corrections.',
+        'Generate audit-ready reconciliation insights for stakeholders in seconds.'
+      ]
     },
     {
       title: 'Fraud Detection',
       image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a20636d2cda86f2900e1379_fraud%20detection.webp',
-      body: 'Monitor A/R and A/P transactions to spot anomalies such as duplicate payments, unauthorized vendor activity, and internal fraud risks.'
+      body: [
+        'Monitor transactions across A/R and A/P to identify irregularities such as duplicate payments, unauthorized vendor activity, or counterfeit transactions.',
+        'Detect insider fraud by analyzing patterns and behaviors across financial operations.'
+      ]
     },
     {
       title: 'Compliance Gap Reporting',
       image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a20636edddb92e8ee554383_compliance%20reporting.webp',
-      body: 'Ensure compliance with tax regulations and financial reporting standards (IFRS, GAAP), featuring dynamic adjustments to regulatory shifts.'
+      body: [
+        'Ensure compliance with tax regulations, financial reporting standards (e.g., IFRS, GAAP), and internal policies.',
+        'Automate adjustments to processes when regulations evolve, avoiding manual efforts to track and implement changes.'
+      ]
     },
     {
       title: 'Expense Classification',
       image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a20636e51c27d06a8a4ff1f_expense%20clasification.webp',
-      body: 'Automate expense categorizations by vendor, department, or GL code using intelligent labeling models for cleaner ledgers and faster month-end closes.'
+      body: 'Auto-categorize expenses by vendor, department, or GL code using intelligent tagging models. Ensure cleaner books, faster close cycles, and fewer manual adjustments.'
     }
   ];
 
   function cardMarkup(card) {
+    var contentHtml = '';
+    if (Array.isArray(card.body)) {
+      contentHtml = '<ul class="auc-bullets">' +
+        card.body.map(function (item) {
+          return '<li>' + item + '</li>';
+        }).join('') +
+      '</ul>';
+    } else {
+      contentHtml = '<p>' + card.body + '</p>';
+    }
+
     return (
       '<article class="auc-card">' +
         '<img class="auc-image" src="' + card.image + '" alt="">' +
@@ -55,7 +78,7 @@
         '<span class="auc-light" aria-hidden="true"></span>' +
         '<div class="auc-copy">' +
           '<h3>' + card.title + '</h3>' +
-          '<p>' + card.body + '</p>' +
+          contentHtml +
         '</div>' +
       '</article>'
     );
@@ -78,7 +101,7 @@
       overflow: hidden !important;
     }
 
-    ${S} h2, ${S} h3, ${S} p {
+    ${S} h2, ${S} h3, ${S} p, ${S} ul, ${S} li {
       margin: 0 !important;
       padding: 0 !important;
     }
@@ -195,7 +218,7 @@
       position: absolute !important;
       inset: 0 !important;
       z-index: 2 !important;
-      background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.8) 58%, #fff 100%) !important;
+      background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.85) 45%, #fff 100%) !important;
       opacity: 0 !important;
       transition: opacity 0.35s !important;
     }
@@ -206,7 +229,7 @@
       right: 20px !important;
       bottom: 18px !important;
       z-index: 3 !important;
-      transform: translateY(calc(100% - 34px)) !important;
+      transform: translateY(calc(100% - 38px)) !important;
       transition: transform 0.42s cubic-bezier(0.22, 1, 0.36, 1) !important;
     }
 
@@ -220,14 +243,35 @@
       transition: color 0.3s !important;
     }
 
-    ${S} .auc-copy p {
+    ${S} .auc-copy p,
+    ${S} .auc-copy .auc-bullets {
       max-width: 360px !important;
-      font-size: 14px !important;
+      font-size: 13.5px !important;
       line-height: 1.45 !important;
       font-weight: 400 !important;
       color: var(--auc-muted) !important;
       opacity: 0 !important;
       transition: opacity 0.32s 0.06s !important;
+    }
+
+    ${S} .auc-bullets {
+      margin: 0 !important;
+      padding: 0 0 0 16px !important;
+      list-style-type: disc !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 10px !important;
+    }
+
+    ${S} .auc-bullets li {
+      font-size: 13.5px !important;
+      line-height: 1.45 !important;
+      font-weight: 400 !important;
+      color: var(--auc-muted) !important;
+    }
+
+    ${S} .auc-bullets li::marker {
+      color: var(--auc-accent) !important;
     }
 
     ${S} .auc-card:hover .auc-image,
@@ -257,7 +301,9 @@
     }
 
     ${S} .auc-card:hover .auc-copy p,
-    ${S} .auc-card:focus-within .auc-copy p {
+    ${S} .auc-card:focus-within .auc-copy p,
+    ${S} .auc-card:hover .auc-copy .auc-bullets,
+    ${S} .auc-card:focus-within .auc-copy .auc-bullets {
       opacity: 1 !important;
     }
 
@@ -308,7 +354,8 @@
       ${S} .auc-copy h3 {
         color: var(--auc-primary) !important;
       }
-      ${S} .auc-copy p {
+      ${S} .auc-copy p,
+      ${S} .auc-copy .auc-bullets {
         opacity: 1 !important;
       }
     }
