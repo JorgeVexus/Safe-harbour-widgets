@@ -18,32 +18,32 @@
     {
       title: 'Accounts Receivable (A/R)',
       image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a20610ff6ad35fc4aa3412a_ar.webp',
-      body: 'Automatizacion de generacion de facturas para mejorar cobros y reducir el DSO, con conciliacion de pagos en tiempo real mediante IA.'
+      body: 'Automated invoice generation to accelerate collections and reduce DSO, featuring real-time AI payment matching and reconciliation.'
     },
     {
       title: 'Accounts Payable (A/P)',
       image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a20636dbfb40ec99c1ce7b2_accounts%20playable.webp',
-      body: 'Identificacion y prevencion de proveedores fraudulentos o facturas duplicadas, con flujos de aprobacion automatizados para terminos de pago globales.'
+      body: 'Identify and prevent fraudulent vendor activity or duplicate invoices with automated approval workflows built for global payment terms.'
     },
     {
       title: 'Bank Reconciliations',
       image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a20636d57a7449ad9b06938_bank%20reconciliations.webp',
-      body: 'Identificacion automatica de transacciones no coincidentes o entradas duplicadas, generando reportes de conciliacion listos para auditoria.'
+      body: 'Automatically pinpoint unmatched transactions or duplicate entries, generating audit-ready reconciliation reports instantly.'
     },
     {
       title: 'Fraud Detection',
       image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a20636d2cda86f2900e1379_fraud%20detection.webp',
-      body: 'Monitoreo de transacciones en A/R y A/P para detectar irregularidades como pagos duplicados o actividad de proveedores no autorizada, incluyendo deteccion de fraude interno.'
+      body: 'Monitor A/R and A/P transactions to spot anomalies such as duplicate payments, unauthorized vendor activity, and internal fraud risks.'
     },
     {
       title: 'Compliance Gap Reporting',
       image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a20636edddb92e8ee554383_compliance%20reporting.webp',
-      body: 'Aseguramiento del cumplimiento de normativas fiscales y estandares de reporte financiero (IFRS, GAAP), con ajustes automaticos ante cambios regulatorios.'
+      body: 'Ensure compliance with tax regulations and financial reporting standards (IFRS, GAAP), featuring dynamic adjustments to regulatory shifts.'
     },
     {
       title: 'Expense Classification',
       image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a20636e51c27d06a8a4ff1f_expense%20clasification.webp',
-      body: 'Clasificacion automatica de gastos por proveedor, departamento o codigo GL usando modelos de etiquetado inteligente, para libros mas limpios y cierres mas rapidos.'
+      body: 'Automate expense categorizations by vendor, department, or GL code using intelligent labeling models for cleaner ledgers and faster month-end closes.'
     }
   ];
 
