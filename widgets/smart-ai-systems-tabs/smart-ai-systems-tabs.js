@@ -354,6 +354,83 @@
 
     ${S} .shi-ip i { font-size: 26px !important; color: #aaa !important; opacity: 0.4 !important; }
     ${S} .shi-ip img { width: 100% !important; height: auto !important; object-fit: cover !important; display: block !important; }
+
+    @media (max-width: 980px) {
+      ${S} .shi {
+        flex-direction: column !important;
+        gap: 24px !important;
+        padding: 0 24px !important;
+      }
+      ${S} .shi-sidebar {
+        order: -1 !important;
+        flex: none !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        width: 100% !important;
+        padding: 0 !important;
+      }
+      ${S} .shi-nav {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+      }
+      ${S} .shi-content {
+        width: 100% !important;
+        padding: 0 !important;
+        flex: none !important;
+      }
+      ${S} .shi-panel.shi-on {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 24px !important;
+      }
+      ${S} .shi-img, ${S} .shi-tc {
+        width: 100% !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        flex: none !important;
+      }
+      ${S} .shi-img {
+        height: 280px !important;
+      }
+      ${S} .shi-grid-industries {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+
+    @media (max-width: 620px) {
+      ${S} .shi {
+        padding: 0 16px !important;
+      }
+      ${S} .shi-nav {
+        grid-template-columns: 1fr !important;
+      }
+      ${S} .shi-tt {
+        font-size: 24px !important;
+      }
+      ${S} .shi-tb {
+        font-size: 13px !important;
+      }
+      ${S} .shi-img {
+        height: 230px !important;
+      }
+      ${S} .shi-cta {
+        white-space: normal !important;
+        text-align: center !important;
+        width: 100% !important;
+      }
+      ${S} .shi-gh {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+      }
+      ${S} .shi-gh .shi-cta {
+        width: 100% !important;
+      }
+      ${S} .shi-grid-industries {
+        grid-template-columns: 1fr !important;
+      }
+    }
   `;
 
   /* ── HTML template ── */
@@ -472,6 +549,12 @@
         p.offsetHeight;
         p.style.animation = '';
         p.classList.add('shi-on');
+
+        if (window.matchMedia('(max-width: 980px)').matches) {
+          requestAnimationFrame(function () {
+            p.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+        }
       });
     });
   }
