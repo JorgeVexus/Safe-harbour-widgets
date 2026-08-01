@@ -52,8 +52,10 @@
             '<p>' + card.body + '</p>' +
           '</div>' +
           '<a class="bps-link" href="#" aria-label="Learn more about ' + card.title + '">' +
+            '<span class="bps-link-spacer-left" aria-hidden="true"></span>' +
             '<span>Learn More</span>' +
-            '<img src="' + ARROW + '" alt="">' +
+            '<img src="' + ARROW + '" alt="" aria-hidden="true">' +
+            '<span class="bps-link-spacer-right" aria-hidden="true"></span>' +
           '</a>' +
         '</div>' +
       '</article>'
@@ -175,13 +177,6 @@
       border-radius: 10px !important;
       background: #fff !important;
       box-shadow: 0 4px 3px rgba(0,0,0,0.1), 0 2px 2px rgba(0,0,0,0.1) !important;
-      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
-    }
-
-    ${S} .bps-card:hover {
-      transform: translateY(-4px) !important;
-      border-color: rgba(40,125,152,0.18) !important;
-      box-shadow: 0 18px 28px rgba(15,23,42,0.12), 0 8px 12px rgba(40,125,152,0.08) !important;
     }
 
     ${S} .bps-card-inner {
@@ -220,7 +215,7 @@
       min-height: 31px !important;
       display: flex !important;
       align-items: center !important;
-      justify-content: center !important;
+      justify-content: flex-start !important;
       gap: 12px !important;
       padding: 10px 16px !important;
       border-radius: 8px !important;
@@ -231,12 +226,23 @@
       line-height: 1 !important;
       font-weight: 700 !important;
       box-shadow: 0 10px 15px rgba(40,125,152,0.2), 0 4px 6px rgba(40,125,152,0.2) !important;
-      transition: transform 0.2s ease, background 0.2s ease !important;
+      overflow: hidden !important;
     }
 
-    ${S} .bps-link:hover {
-      background: var(--bps-secondary) !important;
-      transform: translateY(-1px) !important;
+    ${S} .bps-link-spacer-left {
+      flex-grow: 1 !important;
+      flex-shrink: 1 !important;
+      transition: flex-grow 0.35s cubic-bezier(0.22, 1, 0.36, 1) !important;
+    }
+
+    ${S} .bps-link-spacer-right {
+      flex-grow: 1 !important;
+      flex-shrink: 1 !important;
+      transition: flex-grow 0.35s cubic-bezier(0.22, 1, 0.36, 1) !important;
+    }
+
+    ${S} .bps-card:hover .bps-link-spacer-left {
+      flex-grow: 0 !important;
     }
 
     ${S} .bps-link img {
