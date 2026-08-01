@@ -89,27 +89,6 @@
       bullets: [
         'Focus your investment on practical workflow documentation and implementation guidance that can scale as your AI roadmap expands.'
       ]
-    },
-    {
-      title: 'Clear Workflow Insights That Eliminate Uncertainty',
-      image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a4bf097acec263f0e97563c_clear.avif',
-      bullets: [
-        'Create shared understanding across leadership, operations, and technical teams before AI development begins.'
-      ]
-    },
-    {
-      title: 'Measurable Optimization of Processes',
-      image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a4bf09786041c1c67f1d479_messurable.avif',
-      bullets: [
-        'Prioritize the workflow improvements most likely to reduce manual effort, shorten cycle times, and improve operational visibility.'
-      ]
-    },
-    {
-      title: 'Accelerated Development and Implementation',
-      image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a4bf0989e159adcdfaa685d_Accelerated.avif',
-      bullets: [
-        'Move from analysis to execution faster with mapped processes, clearer requirements, and fewer assumptions for build teams.'
-      ]
     }
   ];
 
