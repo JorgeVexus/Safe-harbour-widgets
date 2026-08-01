@@ -157,7 +157,7 @@
     ${S} .bps-viewport {
       width: 100% !important;
       overflow: hidden !important;
-      padding: 10px 0 12px !important;
+      padding: 24px 6px 28px !important;
     }
 
     ${S} .bps-track {
@@ -171,17 +171,18 @@
     ${S} .bps-card {
       flex: 0 0 305px !important;
       width: 305px !important;
-      height: 238px !important;
+      min-height: 268px !important;
+      height: 268px !important;
       position: relative !important;
       border: 2px solid rgba(0,0,0,0) !important;
-      border-radius: 10px !important;
+      border-radius: 12px !important;
       background: #fff !important;
-      box-shadow: 0 4px 3px rgba(0,0,0,0.1), 0 2px 2px rgba(0,0,0,0.1) !important;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.06) !important;
     }
 
     ${S} .bps-card-inner {
       position: absolute !important;
-      inset: 34px 28px !important;
+      inset: 28px 24px !important;
       display: flex !important;
       flex-direction: column !important;
       justify-content: space-between !important;
@@ -190,22 +191,22 @@
     ${S} .bps-copy {
       display: flex !important;
       flex-direction: column !important;
-      gap: 24px !important;
+      gap: 12px !important;
     }
 
     ${S} .bps-copy h3 {
       width: 100% !important;
       font-family: 'Play', sans-serif !important;
       font-size: 20px !important;
-      line-height: 1.4 !important;
+      line-height: 1.35 !important;
       font-weight: 700 !important;
       color: var(--bps-secondary) !important;
     }
 
     ${S} .bps-copy p {
       width: 100% !important;
-      font-size: 14px !important;
-      line-height: 1.43 !important;
+      font-size: 13.5px !important;
+      line-height: 1.45 !important;
       font-weight: 400 !important;
       color: var(--bps-muted) !important;
     }
