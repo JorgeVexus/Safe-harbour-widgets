@@ -159,22 +159,23 @@
 
     ${S} .esic-copy {
       position: absolute !important;
-      left: 20px !important;
-      right: 20px !important;
-      bottom: 18px !important;
+      left: 24px !important;
+      right: 24px !important;
+      bottom: 24px !important;
       z-index: 3 !important;
-      transform: translateY(calc(100% - 34px)) !important;
-      transition: transform 0.42s cubic-bezier(0.22, 1, 0.36, 1) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: flex-end !important;
     }
 
     ${S} .esic-copy h3 {
       font-family: 'Play', sans-serif !important;
       font-size: clamp(18px, 1.4vw, 25px) !important;
-      line-height: 1.16 !important;
+      line-height: 1.2 !important;
       font-weight: 700 !important;
       color: #fff !important;
-      margin-bottom: 16px !important;
-      transition: color 0.3s !important;
+      margin-bottom: 0 !important;
+      transition: color 0.3s ease, margin-bottom 0.35s cubic-bezier(0.22, 1, 0.36, 1) !important;
     }
 
     ${S} .esic-copy p {
@@ -183,8 +184,11 @@
       line-height: 1.45 !important;
       font-weight: 400 !important;
       color: var(--esic-muted) !important;
+      max-height: 0 !important;
       opacity: 0 !important;
-      transition: opacity 0.32s 0.06s !important;
+      overflow: hidden !important;
+      margin-top: 0 !important;
+      transition: max-height 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease 0.05s, margin-top 0.35s ease !important;
     }
 
     ${S} .esic-card:hover .esic-image,
@@ -203,18 +207,15 @@
       opacity: 1 !important;
     }
 
-    ${S} .esic-card:hover .esic-copy,
-    ${S} .esic-card:focus-within .esic-copy {
-      transform: translateY(0) !important;
-    }
-
     ${S} .esic-card:hover .esic-copy h3,
     ${S} .esic-card:focus-within .esic-copy h3 {
       color: var(--esic-primary) !important;
+      margin-bottom: 10px !important;
     }
 
     ${S} .esic-card:hover .esic-copy p,
     ${S} .esic-card:focus-within .esic-copy p {
+      max-height: 140px !important;
       opacity: 1 !important;
     }
 
