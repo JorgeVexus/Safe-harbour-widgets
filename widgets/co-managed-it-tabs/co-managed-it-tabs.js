@@ -178,7 +178,7 @@
 
     ${S} .cmi-header {
       max-width: 870px !important;
-      margin-bottom: clamp(56px, 5vw, 78px) !important;
+      margin-bottom: clamp(32px, 3.5vw, 48px) !important;
     }
 
     ${S} .cmi-heading {
@@ -187,15 +187,11 @@
       line-height: 1 !important;
       font-weight: 700 !important;
       color: var(--cmi-primary) !important;
-      margin-bottom: 12px !important;
+      margin-bottom: 0 !important;
     }
 
     ${S} .cmi-desc {
-      max-width: 823px !important;
-      font-size: 18px !important;
-      line-height: 1.62 !important;
-      font-weight: 400 !important;
-      color: var(--cmi-muted) !important;
+      display: none !important;
     }
 
     ${S} .cmi-layout {
@@ -509,7 +505,6 @@
       <div class="cmi-inner">
         <header class="cmi-header">
           <h1 class="cmi-heading">Co-Managed IT That Scales with Your Team</h1>
-          <p class="cmi-desc">Expert support that works alongside your current IT staff, building a robust and resilient IT department.</p>
         </header>
 
         <div class="cmi-layout">
