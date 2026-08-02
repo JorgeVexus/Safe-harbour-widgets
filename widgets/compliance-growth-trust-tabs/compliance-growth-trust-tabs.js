@@ -465,7 +465,7 @@
             </ul>
 
             <div class="cgt-cta">
-              <a href="https://calendly.com/becyberaware/30-minutes-with-dan-stratton-cissp-ccsp-cciso" class="cgt-cta-button">Schedule a call <img src="${ARROW}" alt=""></a>
+              <a href="https://calendly.com/becyberaware/30-minutes-with-dan-stratton-cissp-ccsp-cciso" target="_blank" rel="noopener noreferrer" class="cgt-cta-button">Schedule a call <img src="${ARROW}" alt=""></a>
             </div>
           </aside>
 

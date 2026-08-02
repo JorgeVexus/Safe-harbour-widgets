@@ -470,7 +470,7 @@
             </ul>
 
             <div class="cra-cta">
-              <a href="https://calendly.com/becyberaware/30-minutes-with-dan-stratton-cissp-ccsp-cciso" class="cra-cta-button">Schedule a call <img src="${ARROW}" alt=""></a>
+              <a href="https://calendly.com/becyberaware/30-minutes-with-dan-stratton-cissp-ccsp-cciso" target="_blank" rel="noopener noreferrer" class="cra-cta-button">Schedule a call <img src="${ARROW}" alt=""></a>
               <p>Stay a step ahead of emerging cyber threats with our Cybersecurity Risk Assessment service. Whether you choose a one-time assessment or include it as part of a comprehensive solution, this service helps protect your business, giving you peace of mind and a stronger security posture.</p>
               <p>Gain expert insight, proactive risk management, and the confidence that your organization is safeguarded against today's ever-changing cyber risks.</p>
             </div>

@@ -434,7 +434,7 @@
         </div>
 
         <div class="cta-wrapper">
-          <a href="https://calendly.com/becyberaware/30-minutes-with-dan-stratton-cissp-ccsp-cciso" class="cta-button">
+          <a href="https://calendly.com/becyberaware/30-minutes-with-dan-stratton-cissp-ccsp-cciso" target="_blank" rel="noopener noreferrer" class="cta-button">
             Schedule a call
             <span class="cta-arrow">&rarr;</span>
           </a>

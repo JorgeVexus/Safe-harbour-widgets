@@ -293,7 +293,7 @@
       <div class="mib-inner">
         <header class="mib-header">
           <h2 class="mib-title">What&#39;s Included In Our Fully Managed IT Bundle?</h2>
-          <a href="/#cta-form" class="mib-cta">Have Questions? <span aria-hidden="true">-&gt;</span></a>
+          <a href="https://calendly.com/becyberaware/30-minutes-with-dan-stratton-cissp-ccsp-cciso" target="_blank" rel="noopener noreferrer" class="mib-cta">Have Questions? <span aria-hidden="true">-&gt;</span></a>
         </header>
 
         <div class="mib-slider" data-slider>
