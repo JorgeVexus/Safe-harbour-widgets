@@ -465,7 +465,7 @@
         </div>
 
         <div class="shi-panel" id="shi-p1" role="tabpanel">
-          <div class="shi-img" aria-hidden="true"><img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/69bd7fe891b12561f09d862f_ai%20workflow%20assestment%20image.webp" alt=""></div>
+          <div class="shi-img" aria-hidden="true"><img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/69bd7ed84459f56bb58e187f_ai%20transformation%20bundle%20image.webp" alt=""></div>
           <div class="shi-tc">
             <span class="shi-ti" style="--shi-icon: url('https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba5b550267ae318c7a0_ai%20transformation%20bundle%20icon.svg')" aria-hidden="true"></span>
             <h2 class="shi-tt">Unlock Your AI Potential</h2>
@@ -475,7 +475,7 @@
         </div>
 
         <div class="shi-panel" id="shi-p2" role="tabpanel">
-          <div class="shi-img" aria-hidden="true"><img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/69bd7ed84459f56bb58e187f_ai%20transformation%20bundle%20image.webp" alt=""></div>
+          <div class="shi-img" aria-hidden="true"><img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/69bd7fe891b12561f09d862f_ai%20workflow%20assestment%20image.webp" alt=""></div>
           <div class="shi-tc">
             <span class="shi-ti" style="--shi-icon: url('https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba4585299f4854b10db_Ai%20workflow%20assesment%20icon.svg')" aria-hidden="true"></span>
             <h2 class="shi-tt">Precision Mapping for AI Success</h2>
