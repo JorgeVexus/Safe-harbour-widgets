@@ -1,0 +1,460 @@
+<link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --primary-blue: rgba(40, 125, 152, 1);
+    --primary-blue-light: rgba(40, 125, 152, 0.12);
+    --primary-blue-hover: rgba(40, 125, 152, 0.25);
+    --dark-blue: #0E182C;
+    --text-gray: #45556C;
+    --bg-white: #FFFFFF;
+    --line-color: #CBD5E0;
+    --transition-speed: 0.4s;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  .process-section-embed {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-white);
+    color: var(--dark-blue);
+    padding: 100px 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .process-section-embed .container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .process-section-embed .process-header {
+    text-align: center;
+    margin-bottom: 72px;
+    opacity: 0;
+    animation: fadeInUp 0.8s forwards;
+  }
+
+  .process-section-embed .process-label {
+    font-family: 'Play', sans-serif;
+    color: var(--primary-blue);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .process-section-embed .process-heading {
+    font-family: 'Play', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--dark-blue);
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+
+  .process-section-embed .process-subtitle {
+    font-size: 16px;
+    color: var(--text-gray);
+    line-height: 1.75;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .process-section-embed .process-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    gap: 48px;
+  }
+
+  .process-section-embed .process-steps::before {
+    content: '';
+    position: absolute;
+    top: 198px;
+    left: 8%;
+    right: 8%;
+    height: 0;
+    border-top: 2px dashed var(--line-color);
+    z-index: 1;
+  }
+
+  .process-section-embed .process-step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 0.8s forwards;
+  }
+
+  .process-section-embed .process-step:nth-child(1) { animation-delay: 0.2s; }
+  .process-section-embed .process-step:nth-child(2) { animation-delay: 0.4s; }
+  .process-section-embed .process-step:nth-child(3) { animation-delay: 0.6s; }
+
+  .process-section-embed .icon-wrapper {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    margin-bottom: 24px;
+    transition: transform var(--transition-speed);
+  }
+
+  .process-section-embed .icon-bg {
+    position: absolute;
+    inset: 0;
+    background-color: var(--primary-blue);
+    opacity: 0.12;
+    border-radius: 50%;
+    transition: opacity var(--transition-speed), transform var(--transition-speed);
+  }
+
+  .process-section-embed .icon-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    stroke: var(--primary-blue);
+    z-index: 2;
+  }
+
+  .process-section-embed .process-step:hover .icon-wrapper { transform: scale(1.1); }
+  .process-section-embed .process-step:hover .icon-bg { opacity: 0.22; }
+
+  .process-section-embed .icon-connector {
+    width: 1px;
+    height: 34px;
+    background-color: var(--line-color);
+  }
+
+  .process-section-embed .step-number {
+    font-family: 'Play', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--primary-blue);
+    opacity: 0.35;
+    background-color: var(--bg-white);
+    padding: 0 10px;
+    margin-bottom: 0;
+    line-height: 1;
+    transition: opacity var(--transition-speed);
+  }
+
+  .process-section-embed .process-step:hover .step-number { opacity: 1; }
+
+  .process-section-embed .number-connector {
+    width: 1px;
+    height: 34px;
+    background-color: var(--line-color);
+    margin-bottom: 20px;
+  }
+
+  .process-section-embed .step-title {
+    font-family: 'Play', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--dark-blue);
+    line-height: 1.3;
+    transition: color var(--transition-speed);
+  }
+
+  .process-section-embed .process-step:hover .step-title { color: var(--primary-blue); }
+
+  .process-section-embed .step-body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .process-section-embed .step-description {
+    font-size: 14px;
+    color: var(--text-gray);
+    line-height: 1.7;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* =========================================
+     ANIMACIONES DE CICLO ACUMULATIVO (9s total)
+     ========================================= */
+
+  @keyframes c1-transform {
+    0% { transform: scale(1); }
+    11.11% { transform: scale(1.15); }
+    33.33% { transform: scale(1.15); }
+    38.88% { transform: scale(1); }
+    100% { transform: scale(1); }
+  }
+  @keyframes c1-bg {
+    0% { opacity: 0.12; transform: scale(1); }
+    11.11% { opacity: 1; transform: scale(1.1); }
+    33.33% { opacity: 1; transform: scale(1.1); }
+    38.88% { opacity: 0.12; transform: scale(1); }
+    100% { opacity: 0.12; transform: scale(1); }
+  }
+  @keyframes c1-stroke {
+    0% { stroke: rgba(40,125,152,1); }
+    11.11% { stroke: #FFFFFF; }
+    33.33% { stroke: #FFFFFF; }
+    38.88% { stroke: rgba(40,125,152,1); }
+    100% { stroke: rgba(40,125,152,1); }
+  }
+  @keyframes c1-opacity {
+    0% { opacity: 0.35; }
+    11.11% { opacity: 1; }
+    33.33% { opacity: 1; }
+    38.88% { opacity: 0.35; }
+    100% { opacity: 0.35; }
+  }
+  @keyframes c1-color {
+    0% { color: #0E182C; }
+    11.11% { color: rgba(40,125,152,1); }
+    33.33% { color: rgba(40,125,152,1); }
+    38.88% { color: #0E182C; }
+    100% { color: #0E182C; }
+  }
+
+  @keyframes c2-transform {
+    0%, 33.33% { transform: scale(1); }
+    44.44% { transform: scale(1.15); }
+    66.66% { transform: scale(1.15); }
+    72.22% { transform: scale(1); }
+    100% { transform: scale(1); }
+  }
+  @keyframes c2-bg {
+    0%, 33.33% { opacity: 0.12; transform: scale(1); }
+    44.44% { opacity: 1; transform: scale(1.1); }
+    66.66% { opacity: 1; transform: scale(1.1); }
+    72.22% { opacity: 0.12; transform: scale(1); }
+    100% { opacity: 0.12; transform: scale(1); }
+  }
+  @keyframes c2-stroke {
+    0%, 33.33% { stroke: rgba(40,125,152,1); }
+    44.44% { stroke: #FFFFFF; }
+    66.66% { stroke: #FFFFFF; }
+    72.22% { stroke: rgba(40,125,152,1); }
+    100% { stroke: rgba(40,125,152,1); }
+  }
+  @keyframes c2-opacity {
+    0%, 33.33% { opacity: 0.35; }
+    44.44% { opacity: 1; }
+    66.66% { opacity: 1; }
+    72.22% { opacity: 0.35; }
+    100% { opacity: 0.35; }
+  }
+  @keyframes c2-color {
+    0%, 33.33% { color: #0E182C; }
+    44.44% { color: rgba(40,125,152,1); }
+    66.66% { color: rgba(40,125,152,1); }
+    72.22% { color: #0E182C; }
+    100% { color: #0E182C; }
+  }
+
+  @keyframes c3-transform {
+    0%, 66.66% { transform: scale(1); }
+    77.77% { transform: scale(1.15); }
+    94.44% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+  }
+  @keyframes c3-bg {
+    0%, 66.66% { opacity: 0.12; transform: scale(1); }
+    77.77% { opacity: 1; transform: scale(1.1); }
+    94.44% { opacity: 1; transform: scale(1.1); }
+    100% { opacity: 0.12; transform: scale(1); }
+  }
+  @keyframes c3-stroke {
+    0%, 66.66% { stroke: rgba(40,125,152,1); }
+    77.77% { stroke: #FFFFFF; }
+    94.44% { stroke: #FFFFFF; }
+    100% { stroke: rgba(40,125,152,1); }
+  }
+  @keyframes c3-opacity {
+    0%, 66.66% { opacity: 0.35; }
+    77.77% { opacity: 1; }
+    94.44% { opacity: 1; }
+    100% { opacity: 0.35; }
+  }
+  @keyframes c3-color {
+    0%, 66.66% { color: #0E182C; }
+    77.77% { color: rgba(40,125,152,1); }
+    94.44% { color: rgba(40,125,152,1); }
+    100% { color: #0E182C; }
+  }
+
+  .process-section-embed .process-step:nth-child(1) .icon-wrapper { animation: c1-transform 9s infinite; }
+  .process-section-embed .process-step:nth-child(1) .icon-bg { animation: c1-bg 9s infinite; }
+  .process-section-embed .process-step:nth-child(1) .icon-svg { animation: c1-stroke 9s infinite; }
+  .process-section-embed .process-step:nth-child(1) .step-number { animation: c1-opacity 9s infinite; }
+  .process-section-embed .process-step:nth-child(1) .step-title { animation: c1-color 9s infinite; }
+
+  .process-section-embed .process-step:nth-child(2) .icon-wrapper { animation: c2-transform 9s infinite; }
+  .process-section-embed .process-step:nth-child(2) .icon-bg { animation: c2-bg 9s infinite; }
+  .process-section-embed .process-step:nth-child(2) .icon-svg { animation: c2-stroke 9s infinite; }
+  .process-section-embed .process-step:nth-child(2) .step-number { animation: c2-opacity 9s infinite; }
+  .process-section-embed .process-step:nth-child(2) .step-title { animation: c2-color 9s infinite; }
+
+  .process-section-embed .process-step:nth-child(3) .icon-wrapper { animation: c3-transform 9s infinite; }
+  .process-section-embed .process-step:nth-child(3) .icon-bg { animation: c3-bg 9s infinite; }
+  .process-section-embed .process-step:nth-child(3) .icon-svg { animation: c3-stroke 9s infinite; }
+  .process-section-embed .process-step:nth-child(3) .step-number { animation: c3-opacity 9s infinite; }
+  .process-section-embed .process-step:nth-child(3) .step-title { animation: c3-color 9s infinite; }
+
+  .process-section-embed .cta-wrapper {
+    margin-top: 64px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 0.8s 0.9s forwards;
+  }
+
+  .process-section-embed .cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--dark-blue);
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 16px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+  }
+
+  .process-section-embed .cta-button:hover {
+    background-color: #1a2a45;
+    transform: translateY(-2px);
+  }
+
+  .process-section-embed .cta-arrow { font-size: 18px; }
+
+  @media (max-width: 991px) {
+    .process-section-embed { padding: 80px 20px; }
+    .process-section-embed .process-heading { font-size: 36px; }
+    .process-section-embed .process-steps {
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+    }
+    .process-section-embed .process-steps::before { display: none; }
+    .process-section-embed .process-step { max-width: 500px; }
+    .process-section-embed .step-description { max-width: 420px; }
+  }
+
+  @media (max-width: 479px) {
+    .process-section-embed .process-heading { font-size: 28px; }
+    .process-section-embed .process-subtitle { font-size: 14px; }
+    .process-section-embed .step-title { font-size: 18px; }
+    .process-section-embed .step-description { font-size: 13px; }
+  }
+</style>
+
+<section class="process-section-embed">
+  <div class="container">
+    <div class="process-header">
+      <span class="process-label">OUR PROCESS</span>
+      <h2 class="process-heading">Proactive, Simple, and Transparent</h2>
+      <p class="process-subtitle">
+        A truly bulletproof defense isn't a product you buy; it's a strategic process you implement.<br>
+        Our methodology is designed to build layers of resilience into your organization, ensuring your security is robust, adaptive, and aligned with your business goals.
+      </p>
+    </div>
+
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="icon-wrapper">
+          <div class="icon-bg"></div>
+          <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="rgba(40,125,152,1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </div>
+        <div class="icon-connector"></div>
+        <div class="step-number">01</div>
+        <div class="number-connector"></div>
+        <h3 class="step-title">Comprehensive Security Assessment:</h3>
+        <div class="step-body">
+          <p class="step-description">
+            We start by identifying your unique vulnerabilities and risks, creating a clear picture of your security posture and how it stands up to the modern, AI-driven threat landscape.
+          </p>
+          <p class="step-description">
+            We don't just run a scan; we analyze your workflows, your data, and your business goals to understand what you need to protect most.
+          </p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="icon-wrapper">
+          <div class="icon-bg"></div>
+          <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="rgba(40,125,152,1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+            <line x1="8" y1="2" x2="8" y2="18"></line>
+            <line x1="16" y1="6" x2="16" y2="22"></line>
+          </svg>
+        </div>
+        <div class="icon-connector"></div>
+        <div class="step-number">02</div>
+        <div class="number-connector"></div>
+        <h3 class="step-title">Proactive Defense Implementation:</h3>
+        <div class="step-body">
+          <p class="step-description">
+            We deploy a multi-layered defense system, including 24/7 monitoring, AI-driven threat detection, and ransomware-proof backups. This isn't just about blocking today's threats; our system learns and evolves to stop tomorrow's attacks before they're even launched.
+          </p>
+          <p class="step-description">
+            We integrate Zero Trust principles and micro-segmentation to ensure that even if one area is compromised, the threat cannot spread.
+          </p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="icon-wrapper">
+          <div class="icon-bg"></div>
+          <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="rgba(40,125,152,1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+            <path d="M9 12H4s.55-3.03 2-5c1.62-2.2 5-3 5-3"></path>
+            <path d="M12 15v5s3.03-.55 5-2c2.2-1.62 3-5 3-5"></path>
+          </svg>
+        </div>
+        <div class="icon-connector"></div>
+        <div class="step-number">03</div>
+        <div class="number-connector"></div>
+        <h3 class="step-title">Expert Incident Response:</h3>
+        <div class="step-body">
+          <p class="step-description">
+            If a threat does emerge, our team is on it immediately, isolating the issue and restoring your operations with minimal disruption.
+          </p>
+          <p class="step-description">
+            Our process is audited and tested, ensuring we can contain an attack in hours, not days, and restore your critical systems from secure backups to get you back to business.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-wrapper">
+      <a href="https://calendly.com/becyberaware/30-minutes-with-dan-stratton-cissp-ccsp-cciso" class="cta-button">
+        Schedule a call
+        <span class="cta-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>

@@ -624,7 +624,7 @@
             </ul>
 
             <div class="awp-cta">
-              <button class="awp-cta-button" type="button">Schedule a call <img src="${ARROW}" alt=""></button>
+              <a href="https://calendly.com/becyberaware/30-minutes-with-dan-stratton-cissp-ccsp-cciso" class="awp-cta-button">Schedule a call <img src="${ARROW}" alt=""></a>
               <p>AI success begins by optimizing the workflows that matter most and building a foundation for scalable, company-wide transformation.</p>
             </div>
           </aside>

@@ -293,7 +293,7 @@
       <div class="mib-inner">
         <header class="mib-header">
           <h2 class="mib-title">What&#39;s Included In Our Fully Managed IT Bundle?</h2>
-          <button class="mib-cta" type="button">Have Questions? <span aria-hidden="true">-&gt;</span></button>
+          <a href="/#cta-form" class="mib-cta">Have Questions? <span aria-hidden="true">-&gt;</span></a>
         </header>
 
         <div class="mib-slider" data-slider>

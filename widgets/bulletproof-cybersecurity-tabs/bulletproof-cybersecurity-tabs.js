@@ -450,7 +450,7 @@
             <div class="bpc-help">
               <p class="bpc-help-title">Need help deciding?</p>
               <p class="bpc-help-body">Our architects can design a custom roadmap for your business.</p>
-              <a href="#">Talk to an expert</a>
+              <a href="/#cta-form">Talk to an expert</a>
             </div>
           </aside>
         </div>

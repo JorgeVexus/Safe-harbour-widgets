@@ -1,0 +1,569 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Poppins:wght@300;400;500&display=swap');
+
+
+  :root {
+    --primary-green: #2ec8a1;
+    --dark-blue: #0E182C;
+    --text-gray: #45556C;
+    --bg-white: #FFFFFF;
+    --transition-speed: 0.4s;
+  }
+
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+
+  .process-section-embed {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-white);
+    color: var(--dark-blue);
+    padding: 100px 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+
+  .process-section-embed .container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+
+  .process-section-embed .process-header {
+    text-align: center;
+    margin-bottom: 80px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s forwards;
+  }
+
+
+  .process-section-embed .process-label {
+    font-family: 'Play', sans-serif;
+    color: var(--primary-green);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+
+  .process-section-embed .process-heading {
+    font-family: 'Play', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--dark-blue);
+    line-height: 1.2;
+  }
+
+
+  .process-section-embed .process-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: var(--text-gray);
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 20px auto 0;
+    text-align: center;
+  }
+
+
+  .process-section-embed .process-steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    gap: 40px;
+  }
+
+
+  .process-section-embed .process-steps::before {
+    content: '';
+    position: absolute;
+    top: 140px;
+    left: 10%;
+    right: 10%;
+    height: 0;
+    border-top: 2px dashed #E2E8F0;
+    z-index: 1;
+  }
+
+
+  .process-section-embed .process-step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 0.8s forwards;
+  }
+
+
+  .process-section-embed .process-step:nth-child(1) { animation-delay: 0.2s; }
+  .process-section-embed .process-step:nth-child(2) { animation-delay: 0.4s; }
+  .process-section-embed .process-step:nth-child(3) { animation-delay: 0.6s; }
+  .process-section-embed .process-step:nth-child(4) { animation-delay: 0.8s; }
+  .process-section-embed .process-step:nth-child(5) { animation-delay: 1s; }
+
+
+  .process-section-embed .icon-wrapper {
+    width: 56px;
+    height: 56px;
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+
+  .process-section-embed .icon-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2ec8a1;
+    opacity: 0.15;
+    border-radius: 50%;
+    box-shadow: 0 10px 15px rgba(46, 200, 161, 0.2);
+  }
+
+
+  .process-section-embed .icon-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    z-index: 2;
+    stroke: #2ec8a1;
+  }
+
+
+  .process-section-embed .step-number {
+    font-family: 'Play', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #2ec8a1;
+    opacity: 0.2;
+    background-color: #FFFFFF;
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+
+
+  .process-section-embed .step-title {
+    font-family: 'Play', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #0E182C;
+  }
+
+
+  .process-section-embed .step-description {
+    font-size: 16px;
+    color: #45556C;
+    line-height: 1.6;
+    max-width: 310px;
+  }
+
+
+  /* =========================================
+     ANIMACIONES DE CICLO ACUMULATIVO (9s total)
+     ========================================= */
+  
+  /* PASO 1: Se activa al inicio */
+  @keyframes c1-transform {
+    0% { transform: scale(1); }
+    5.55% { transform: scale(1.15); }
+    88.88% { transform: scale(1.15); }
+    94.44% { transform: scale(1); }
+    100% { transform: scale(1); }
+  }
+  @keyframes c1-bg {
+    0% { opacity: 0.15; transform: scale(1); }
+    5.55% { opacity: 1; transform: scale(1.1); }
+    88.88% { opacity: 1; transform: scale(1.1); }
+    94.44% { opacity: 0.15; transform: scale(1); }
+    100% { opacity: 0.15; transform: scale(1); }
+  }
+  @keyframes c1-stroke {
+    0% { stroke: #2ec8a1; }
+    5.55% { stroke: #FFFFFF; }
+    88.88% { stroke: #FFFFFF; }
+    94.44% { stroke: #2ec8a1; }
+    100% { stroke: #2ec8a1; }
+  }
+  @keyframes c1-opacity {
+    0% { opacity: 0.2; }
+    5.55% { opacity: 1; }
+    88.88% { opacity: 1; }
+    94.44% { opacity: 0.2; }
+    100% { opacity: 0.2; }
+  }
+  @keyframes c1-color {
+    0% { color: #0E182C; }
+    5.55% { color: #2ec8a1; }
+    88.88% { color: #2ec8a1; }
+    94.44% { color: #0E182C; }
+    100% { color: #0E182C; }
+  }
+
+
+  /* PASO 2: Espera 1.8s (20%) */
+  @keyframes c2-transform {
+    0%, 20% { transform: scale(1); }
+    25.55% { transform: scale(1.15); }
+    88.88% { transform: scale(1.15); }
+    94.44% { transform: scale(1); }
+    100% { transform: scale(1); }
+  }
+  @keyframes c2-bg {
+    0%, 20% { opacity: 0.15; transform: scale(1); }
+    25.55% { opacity: 1; transform: scale(1.1); }
+    88.88% { opacity: 1; transform: scale(1.1); }
+    94.44% { opacity: 0.15; transform: scale(1); }
+    100% { opacity: 0.15; transform: scale(1); }
+  }
+  @keyframes c2-stroke {
+    0%, 20% { stroke: #2ec8a1; }
+    25.55% { stroke: #FFFFFF; }
+    88.88% { stroke: #FFFFFF; }
+    94.44% { stroke: #2ec8a1; }
+    100% { stroke: #2ec8a1; }
+  }
+  @keyframes c2-opacity {
+    0%, 20% { opacity: 0.2; }
+    25.55% { opacity: 1; }
+    88.88% { opacity: 1; }
+    94.44% { opacity: 0.2; }
+    100% { opacity: 0.2; }
+  }
+  @keyframes c2-color {
+    0%, 20% { color: #0E182C; }
+    25.55% { color: #2ec8a1; }
+    88.88% { color: #2ec8a1; }
+    94.44% { color: #0E182C; }
+    100% { color: #0E182C; }
+  }
+
+
+  /* PASO 3: Espera 3.6s (40%) */
+  @keyframes c3-transform {
+    0%, 40% { transform: scale(1); }
+    45.55% { transform: scale(1.15); }
+    88.88% { transform: scale(1.15); }
+    94.44% { transform: scale(1); }
+    100% { transform: scale(1); }
+  }
+  @keyframes c3-bg {
+    0%, 40% { opacity: 0.15; transform: scale(1); }
+    45.55% { opacity: 1; transform: scale(1.1); }
+    88.88% { opacity: 1; transform: scale(1.1); }
+    94.44% { opacity: 0.15; transform: scale(1); }
+    100% { opacity: 0.15; transform: scale(1); }
+  }
+  @keyframes c3-stroke {
+    0%, 40% { stroke: #2ec8a1; }
+    45.55% { stroke: #FFFFFF; }
+    88.88% { stroke: #FFFFFF; }
+    94.44% { stroke: #2ec8a1; }
+    100% { stroke: #2ec8a1; }
+  }
+  @keyframes c3-opacity {
+    0%, 40% { opacity: 0.2; }
+    45.55% { opacity: 1; }
+    88.88% { opacity: 1; }
+    94.44% { opacity: 0.2; }
+    100% { opacity: 0.2; }
+  }
+  @keyframes c3-color {
+    0%, 40% { color: #0E182C; }
+    45.55% { color: #2ec8a1; }
+    88.88% { color: #2ec8a1; }
+    94.44% { color: #0E182C; }
+    100% { color: #0E182C; }
+  }
+
+
+  /* PASO 4: Espera 5.4s (60%) */
+  @keyframes c4-transform {
+    0%, 60% { transform: scale(1); }
+    65.55% { transform: scale(1.15); }
+    88.88% { transform: scale(1.15); }
+    94.44% { transform: scale(1); }
+    100% { transform: scale(1); }
+  }
+  @keyframes c4-bg {
+    0%, 60% { opacity: 0.15; transform: scale(1); }
+    65.55% { opacity: 1; transform: scale(1.1); }
+    88.88% { opacity: 1; transform: scale(1.1); }
+    94.44% { opacity: 0.15; transform: scale(1); }
+    100% { opacity: 0.15; transform: scale(1); }
+  }
+  @keyframes c4-stroke {
+    0%, 60% { stroke: #2ec8a1; }
+    65.55% { stroke: #FFFFFF; }
+    88.88% { stroke: #FFFFFF; }
+    94.44% { stroke: #2ec8a1; }
+    100% { stroke: #2ec8a1; }
+  }
+  @keyframes c4-opacity {
+    0%, 60% { opacity: 0.2; }
+    65.55% { opacity: 1; }
+    88.88% { opacity: 1; }
+    94.44% { opacity: 0.2; }
+    100% { opacity: 0.2; }
+  }
+  @keyframes c4-color {
+    0%, 60% { color: #0E182C; }
+    65.55% { color: #2ec8a1; }
+    88.88% { color: #2ec8a1; }
+    94.44% { color: #0E182C; }
+    100% { color: #0E182C; }
+  }
+
+
+  /* PASO 5: Espera 7.2s (80%) */
+  @keyframes c5-transform {
+    0%, 80% { transform: scale(1); }
+    85.55% { transform: scale(1.15); }
+    88.88% { transform: scale(1.15); }
+    94.44% { transform: scale(1); }
+    100% { transform: scale(1); }
+  }
+  @keyframes c5-bg {
+    0%, 80% { opacity: 0.15; transform: scale(1); }
+    85.55% { opacity: 1; transform: scale(1.1); }
+    88.88% { opacity: 1; transform: scale(1.1); }
+    94.44% { opacity: 0.15; transform: scale(1); }
+    100% { opacity: 0.15; transform: scale(1); }
+  }
+  @keyframes c5-stroke {
+    0%, 80% { stroke: #2ec8a1; }
+    85.55% { stroke: #FFFFFF; }
+    88.88% { stroke: #FFFFFF; }
+    94.44% { stroke: #2ec8a1; }
+    100% { stroke: #2ec8a1; }
+  }
+  @keyframes c5-opacity {
+    0%, 80% { opacity: 0.2; }
+    85.55% { opacity: 1; }
+    88.88% { opacity: 1; }
+    94.44% { opacity: 0.2; }
+    100% { opacity: 0.2; }
+  }
+  @keyframes c5-color {
+    0%, 80% { color: #0E182C; }
+    85.55% { color: #2ec8a1; }
+    88.88% { color: #2ec8a1; }
+    94.44% { color: #0E182C; }
+    100% { color: #0E182C; }
+  }
+
+
+  /* APLICACIÓN DE ANIMACIONES A CADA ELEMENTO */
+  .process-section-embed .process-step:nth-child(1) .icon-wrapper { animation: c1-transform 9s infinite; }
+  .process-section-embed .process-step:nth-child(1) .icon-bg { animation: c1-bg 9s infinite; }
+  .process-section-embed .process-step:nth-child(1) .icon-svg { animation: c1-stroke 9s infinite; }
+  .process-section-embed .process-step:nth-child(1) .step-number { animation: c1-opacity 9s infinite; }
+  .process-section-embed .process-step:nth-child(1) .step-title { animation: c1-color 9s infinite; }
+
+  .process-section-embed .process-step:nth-child(2) .icon-wrapper { animation: c2-transform 9s infinite; }
+  .process-section-embed .process-step:nth-child(2) .icon-bg { animation: c2-bg 9s infinite; }
+  .process-section-embed .process-step:nth-child(2) .icon-svg { animation: c2-stroke 9s infinite; }
+  .process-section-embed .process-step:nth-child(2) .step-number { animation: c2-opacity 9s infinite; }
+  .process-section-embed .process-step:nth-child(2) .step-title { animation: c2-color 9s infinite; }
+
+  .process-section-embed .process-step:nth-child(3) .icon-wrapper { animation: c3-transform 9s infinite; }
+  .process-section-embed .process-step:nth-child(3) .icon-bg { animation: c3-bg 9s infinite; }
+  .process-section-embed .process-step:nth-child(3) .icon-svg { animation: c3-stroke 9s infinite; }
+  .process-section-embed .process-step:nth-child(3) .step-number { animation: c3-opacity 9s infinite; }
+  .process-section-embed .process-step:nth-child(3) .step-title { animation: c3-color 9s infinite; }
+
+  .process-section-embed .process-step:nth-child(4) .icon-wrapper { animation: c4-transform 9s infinite; }
+  .process-section-embed .process-step:nth-child(4) .icon-bg { animation: c4-bg 9s infinite; }
+  .process-section-embed .process-step:nth-child(4) .icon-svg { animation: c4-stroke 9s infinite; }
+  .process-section-embed .process-step:nth-child(4) .step-number { animation: c4-opacity 9s infinite; }
+  .process-section-embed .process-step:nth-child(4) .step-title { animation: c4-color 9s infinite; }
+
+  .process-section-embed .process-step:nth-child(5) .icon-wrapper { animation: c5-transform 9s infinite; }
+  .process-section-embed .process-step:nth-child(5) .icon-bg { animation: c5-bg 9s infinite; }
+  .process-section-embed .process-step:nth-child(5) .icon-svg { animation: c5-stroke 9s infinite; }
+  .process-section-embed .process-step:nth-child(5) .step-number { animation: c5-opacity 9s infinite; }
+  .process-section-embed .process-step:nth-child(5) .step-title { animation: c5-color 9s infinite; }
+
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+
+  .process-section-embed .cta-wrapper {
+    margin-top: 64px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 0.8s 0.9s forwards;
+  }
+
+
+  .process-section-embed .cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #0E182C;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 16px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.4s, transform 0.4s;
+  }
+
+
+  .process-section-embed .cta-button:hover {
+    background-color: #1a2a45;
+    transform: translateY(-2px);
+  }
+
+
+  .process-section-embed .cta-arrow { font-size: 18px; }
+
+
+  @media (max-width: 991px) {
+    .process-section-embed { padding: 80px 20px; }
+    .process-section-embed .process-steps {
+      flex-direction: column;
+      gap: 60px;
+    }
+    .process-section-embed .process-steps::before { display: none; }
+    .process-section-embed .process-heading { font-size: 36px; }
+    .process-section-embed .process-step {
+      max-width: 450px;
+      margin: 0 auto;
+    }
+  }
+
+
+  @media (max-width: 479px) {
+    .process-section-embed .process-heading { font-size: 28px; }
+    .process-section-embed .step-title { font-size: 20px; }
+    .process-section-embed .step-description { font-size: 14px; }
+  }
+</style>
+
+
+<section class="process-section-embed">
+  <div class="container">
+    <div class="process-header">
+      <span class="process-label">OUR PROCESS</span>
+      <h2 class="process-heading">Implementation Process</h2>
+      <p class="process-description">Safeguard your finances and optimize your accounting operations with AI Workflow Automation. From fraud detection and compliance gap alignment to the seamless automation of A/R, A/P, and reconciliations, our solution delivers measurable results and peace of mind. Contact us today to unlock faster, more secure, and more accurate bookkeeping workflows!</p>
+    </div>
+
+
+    <div class="process-steps">
+      <!-- Paso 1 -->
+      <div class="process-step">
+        <div class="icon-wrapper">
+          <div class="icon-bg"></div>
+          <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </div>
+        <div class="step-number">01</div>
+        <h3 class="step-title">AI Opportunity Assessment</h3>
+        <p class="step-description">We start by identifying the low-hanging fruit—the areas where AI can deliver the fastest and biggest return on investment.</p>
+      </div>
+
+
+      <!-- Paso 2 -->
+      <div class="process-step">
+        <div class="icon-wrapper">
+          <div class="icon-bg"></div>
+          <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+        </div>
+        <div class="step-number">02</div>
+        <h3 class="step-title">Custom AI Roadmap</h3>
+        <p class="step-description">We provide a clear, step-by-step plan that shows you exactly how we'll implement the solutions without disrupting your operations.</p>
+      </div>
+
+
+      <!-- Paso 3 -->
+      <div class="process-step">
+        <div class="icon-wrapper">
+          <div class="icon-bg"></div>
+          <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+            <path d="M9 12H4s.55-3.03 2-5c1.62-2.2 5-3 5-3"></path>
+            <path d="M12 15v5s3.03-.55 5-2c2.2-1.62 3-5 3-5"></path>
+          </svg>
+        </div>
+        <div class="step-number">03</div>
+        <h3 class="step-title">Seamless Integration & Support</h3>
+        <p class="step-description">We manage the entire integration process and provide ongoing support to ensure your team is empowered and your systems are running smoothly.</p>
+      </div>
+
+
+      <!-- Paso 4 -->
+      <div class="process-step">
+        <div class="icon-wrapper">
+          <div class="icon-bg"></div>
+          <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+        </div>
+        <div class="step-number">04</div>
+        <h3 class="step-title">Testing and Optimization</h3>
+        <p class="step-description">We simulate workflows to identify and fix gaps. Optimize for performance, accuracy, and usability before going live.</p>
+      </div>
+
+
+      <!-- Paso 5 -->
+      <div class="process-step">
+        <div class="icon-wrapper">
+          <div class="icon-bg"></div>
+          <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 4 23 10 17 10"></polyline>
+            <polyline points="1 20 1 14 7 14"></polyline>
+            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+          </svg>
+        </div>
+        <div class="step-number">05</div>
+        <h3 class="step-title">Deployment and Continuous Monitoring</h3>
+        <p class="step-description">Full deployment with fraud detection, thresholds and compliance reports tracking in place. Ongoing monitoring and optimization to address process changes, evolving regulations, or new risks.</p>
+      </div>
+    </div>
+
+
+    <div class="cta-wrapper">
+      <a href="https://calendly.com/becyberaware/30-minutes-with-dan-stratton-cissp-ccsp-cciso" class="cta-button">
+        Schedule a call
+        <span class="cta-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>

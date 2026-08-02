@@ -581,7 +581,7 @@
             <div class="rit-help">
               <p class="rit-help-title">Need help deciding?</p>
               <p class="rit-help-body">Our architects can design a custom roadmap for your business.</p>
-              <a href="#">Talk to an expert</a>
+              <a href="/#cta-form">Talk to an expert</a>
             </div>
           </aside>
 
