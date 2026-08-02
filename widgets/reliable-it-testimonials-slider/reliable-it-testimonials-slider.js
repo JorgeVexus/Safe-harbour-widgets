@@ -101,6 +101,27 @@
       padding: 0 24px !important;
     }
 
+    ${S} .ts-header-line {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      width: 100% !important;
+      margin-bottom: clamp(20px, 3vw, 32px) !important;
+    }
+
+    ${S} .ts-title {
+      font-family: 'Play', sans-serif !important;
+      font-size: 14px !important;
+      font-style: normal !important;
+      font-weight: 700 !important;
+      line-height: 20px !important;
+      letter-spacing: 1.4px !important;
+      text-transform: uppercase !important;
+      color: var(--ts-secondary) !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
     ${S} .ts-viewport {
       width: 100% !important;
       overflow: hidden !important;
@@ -144,7 +165,7 @@
 
     ${S} .ts-quote-icon {
       position: absolute !important;
-      top: -16px !important;
+      top: -26px !important;
       right: 24px !important;
       width: 44px !important;
       height: 36px !important;
@@ -239,7 +260,7 @@
       ${S} .ts-quote-icon {
         width: 38px !important;
         height: 30px !important;
-        top: -14px !important;
+        top: -24px !important;
         right: 18px !important;
       }
       ${S} .ts-card-body {
@@ -252,6 +273,9 @@
   var HTML = `
     <section class="ts-section">
       <div class="ts-inner">
+        <header class="ts-header-line">
+          <h2 class="ts-title">TESTIMONIALS</h2>
+        </header>
         <div class="ts-viewport">
           <div class="ts-grid">
             ${testimonials.map(testimonialMarkup).join('')}

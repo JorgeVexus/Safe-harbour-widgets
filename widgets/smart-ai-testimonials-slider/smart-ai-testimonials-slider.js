@@ -114,10 +114,23 @@
 
     ${S} .ts-header-line {
       display: flex !important;
-      justify-content: flex-end !important;
+      justify-content: space-between !important;
       align-items: center !important;
       width: 100% !important;
       margin-bottom: clamp(24px, 4vw, 40px) !important;
+    }
+
+    ${S} .ts-title {
+      font-family: 'Play', sans-serif !important;
+      font-size: 14px !important;
+      font-style: normal !important;
+      font-weight: 700 !important;
+      line-height: 20px !important;
+      letter-spacing: 1.4px !important;
+      text-transform: uppercase !important;
+      color: var(--ts-secondary) !important;
+      margin: 0 !important;
+      padding: 0 !important;
     }
 
     ${S} .ts-controls {
@@ -198,7 +211,7 @@
 
     ${S} .ts-quote-icon {
       position: absolute !important;
-      top: -16px !important;
+      top: -26px !important;
       right: 24px !important;
       width: 44px !important;
       height: 36px !important;
@@ -313,7 +326,7 @@
       ${S} .ts-quote-icon {
         width: 46px !important;
         height: 38px !important;
-        top: -18px !important;
+        top: -26px !important;
         right: 15px !important;
       }
       ${S} .ts-card-body {
@@ -327,6 +340,7 @@
     <section class="ts-slider-section">
       <div class="ts-inner">
         <header class="ts-header-line">
+          <h2 class="ts-title">TESTIMONIALS</h2>
           <div class="ts-controls">
             <button class="ts-btn ts-prev" type="button" aria-label="Previous testimonial">&lsaquo;</button>
             <button class="ts-btn ts-next" type="button" aria-label="Next testimonial">&rsaquo;</button>
