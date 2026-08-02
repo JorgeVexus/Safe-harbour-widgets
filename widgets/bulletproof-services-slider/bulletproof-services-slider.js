@@ -278,8 +278,9 @@
 
     @media (max-width: 720px) {
       ${S} .bps-inner { padding: 0 16px !important; }
-      ${S} .bps-header { align-items: flex-start !important; }
-      ${S} .bps-title { text-align: left !important; }
+      ${S} .bps-header { align-items: center !important; justify-content: center !important; }
+      ${S} .bps-title { text-align: center !important; }
+      ${S} .bps-copy, ${S} .bps-copy h3, ${S} .bps-copy p { text-align: center !important; }
       ${S} .bps-controls { display: none !important; }
       ${S} .bps-track { gap: 16px !important; }
       ${S} .bps-card {
