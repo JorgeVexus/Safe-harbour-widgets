@@ -134,6 +134,7 @@
       font-weight: 700 !important;
       box-shadow: 0 10px 14px rgba(40, 125, 152, 0.3), 0 4px 6px rgba(40, 125, 152, 0.3) !important;
       cursor: pointer !important;
+      text-decoration: none !important;
     }
 
     ${S} .mib-cta span {

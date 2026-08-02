@@ -315,6 +315,7 @@
       font-weight: 700 !important;
       box-shadow: 0 10px 18px rgba(40, 125, 152, 0.24) !important;
       cursor: pointer !important;
+      text-decoration: none !important;
     }
 
     ${S} .cra-cta-button img {
