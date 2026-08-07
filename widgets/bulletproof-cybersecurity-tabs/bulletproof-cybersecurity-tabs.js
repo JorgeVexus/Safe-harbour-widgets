@@ -25,7 +25,8 @@
       cta: 'Secure Real-Time Threat Protection',
       image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/69d94d5e7386117a5c0a7b95_monitoring.webp',
       icon: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a493a62a4873ec618152776_tiempo.svg',
-      imageFirst: true
+      imageFirst: true,
+      url: 'https://safe-harbour-informatics.webflow.io/bulletproof-cybersecurity-managed-cybersecurity'
     },
     {
       label: 'Always-Recover Cloud Backups',
@@ -34,7 +35,8 @@
       cta: 'Lock Down Your Data',
       image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/69d94d5e5331cd19ad9c1641_ransomware.webp',
       icon: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a493a6270325ae14a9a30a7_recover.svg',
-      imageFirst: false
+      imageFirst: false,
+      url: 'https://safe-harbour-informatics.webflow.io/bulletproof-cybersecurity-secure-your-data'
     },
     {
       label: 'Proactive Patch Management',
@@ -43,7 +45,8 @@
       cta: 'Secure Your Systems Proactively',
       image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/69d94d5e09963fb7ccf95818_proactive.webp',
       icon: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a493a62ea04f502e02df9c7_managed.svg',
-      imageFirst: true
+      imageFirst: true,
+      url: 'https://safe-harbour-informatics.webflow.io/bulletproof-cybersecurity-ftc-safeguards-assessment'
     },
     {
       label: 'Cybersecurity Risk Assessments',
@@ -52,7 +55,8 @@
       cta: 'Get Your NIST-Aligned Security Strategy',
       image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/69d94d5e44d71a84e576a3c5_know%20your%20true.webp',
       icon: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a493a610b17a51efe841a9e_cybersecurty.svg',
-      imageFirst: false
+      imageFirst: false,
+      url: 'https://safe-harbour-informatics.webflow.io/bulletproof-cybersecurity-risk-assessments'
     },
     {
       label: 'Compliance Without Complexity',
@@ -61,7 +65,8 @@
       cta: 'Eliminate Compliance Risks Today',
       image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/69d94d5ef9a3a5bda2ffa389_compliance%20solutions.webp',
       icon: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a493a618a1508d3eaf055b5_compliance.svg',
-      imageFirst: true
+      imageFirst: true,
+      url: 'https://safe-harbour-informatics.webflow.io/bulletproof-cybersecurity-compliance-solutions'
     },
     {
       label: 'AI Security vs AI Attacks',
@@ -70,7 +75,8 @@
       cta: 'Deploy Advanced AI Threat Monitoring',
       image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/69d94d5ecf2d33f98bcbcac0_AI%20driven.webp',
       icon: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a493a612a6dee9e17b5e23c_seguro.svg',
-      imageFirst: false
+      imageFirst: false,
+      url: 'https://safe-harbour-informatics.webflow.io/bulletproof-cybersecurity-advanced-ai-email-security'
     }
   ];
 
@@ -84,7 +90,7 @@
         iconSpan('bpc-panel-icon', tab.icon) +
         '<h2 class="bpc-panel-title">' + tab.title + '</h2>' +
         '<p class="bpc-panel-body">' + tab.body + '</p>' +
-        '<a class="bpc-cta" href="#">' + tab.cta + ' <img src="' + ARROW + '" alt="" aria-hidden="true"></a>' +
+        '<a class="bpc-cta" href="' + (tab.url || '#') + '">' + tab.cta + ' <img src="' + ARROW + '" alt="" aria-hidden="true"></a>' +
       '</div>';
     var media =
       '<div class="bpc-media" aria-hidden="true">' +

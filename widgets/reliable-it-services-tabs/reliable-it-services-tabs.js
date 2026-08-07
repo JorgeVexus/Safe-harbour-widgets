@@ -25,7 +25,8 @@
       cta: 'Scale Your Operations Securely',
       image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/69d950b7b8c148ca9d4af718_decades.webp',
       icon: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a4949b522fc65b7afd876a5_medal.svg',
-      imageFirst: false
+      imageFirst: false,
+      url: 'https://safe-harbour-informatics.webflow.io/reliable-it-services-managed-it-services'
     },
     {
       label: 'Fully Managed IT Services',
@@ -34,7 +35,8 @@
       cta: 'Get Proactive 24/7 IT Support',
       image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/69d950b607da078362647e6b_stop-fighting.webp',
       icon: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a4949b4d191314fed03e0c4_managed%20it.svg',
-      imageFirst: true
+      imageFirst: true,
+      url: 'https://safe-harbour-informatics.webflow.io/reliable-it-services-managed-it-services'
     },
     {
       label: 'Co-Managed IT Services',
@@ -43,7 +45,8 @@
       cta: 'Get Strategic IT Support',
       image: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/69d950b7e1b66d8b635c4bac_expert-it.webp',
       icon: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a4949b46049f151815c3322_comanaged%20it%20icon.svg',
-      imageFirst: false
+      imageFirst: false,
+      url: 'https://safe-harbour-informatics.webflow.io/reliable-it-services-co-managed-it-services'
     },
     {
       label: 'Key Benefits',
@@ -51,6 +54,7 @@
       subtitle: 'Eliminate Daily Tech Headaches So Leaders Focus on Growth',
       cta: 'Build a Rock-Solid IT Foundation',
       icon: 'https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a4949b46a094d32e0e10552_key%20bennefits%20reliable.svg',
+      url: 'https://safe-harbour-informatics.webflow.io/reliable-it-services-managed-it-services',
       benefits: [
         {
           text: 'Eliminate daily tech headaches so leaders focus on growth, not firefighting.',
@@ -86,7 +90,7 @@
         iconSpan('rit-panel-icon', tab.icon) +
         '<h2 class="rit-panel-title">' + tab.title + '</h2>' +
         '<p class="rit-panel-body">' + tab.body + '</p>' +
-        '<a class="rit-cta" href="#">' + tab.cta + ' <img src="' + ARROW + '" alt="" aria-hidden="true"></a>' +
+        '<a class="rit-cta" href="' + (tab.url || '#') + '">' + tab.cta + ' <img src="' + ARROW + '" alt="" aria-hidden="true"></a>' +
       '</div>';
     var media =
       '<div class="rit-media">' +
@@ -121,7 +125,7 @@
               '<p class="rit-benefits-subtitle">' + tab.subtitle + '</p>' +
             '</div>' +
           '</div>' +
-          '<a class="rit-cta" href="#">' + tab.cta + ' <img src="' + ARROW + '" alt="" aria-hidden="true"></a>' +
+          '<a class="rit-cta" href="' + (tab.url || '#') + '">' + tab.cta + ' <img src="' + ARROW + '" alt="" aria-hidden="true"></a>' +
         '</div>' +
         '<div class="rit-benefit-grid">' + cards + '</div>' +
       '</div>'

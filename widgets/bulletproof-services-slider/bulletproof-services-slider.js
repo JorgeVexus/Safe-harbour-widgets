@@ -19,27 +19,33 @@
   var cards = [
     {
       title: 'Cybersecurity Risk Assessment',
-      body: 'Identification Your Vulnerabilities Before Attackers Do'
+      body: 'Identification Your Vulnerabilities Before Attackers Do',
+      url: 'https://safe-harbour-informatics.webflow.io/bulletproof-cybersecurity-risk-assessments'
     },
     {
       title: 'Managed Cybersecurity',
-      body: 'Comprehensive Protection for What Matters Most'
+      body: 'Comprehensive Protection for What Matters Most',
+      url: 'https://safe-harbour-informatics.webflow.io/bulletproof-cybersecurity-managed-cybersecurity'
     },
     {
       title: 'Secure Your Data',
-      body: 'Ransomware-Proof Backup Solutions'
+      body: 'Ransomware-Proof Backup Solutions',
+      url: 'https://safe-harbour-informatics.webflow.io/bulletproof-cybersecurity-secure-your-data'
     },
     {
       title: 'Advanced AI Email Security',
-      body: 'Protect Your Business from Email Fraud, Phishing & Reputation Damage'
+      body: 'Protect Your Business from Email Fraud, Phishing & Reputation Damage',
+      url: 'https://safe-harbour-informatics.webflow.io/bulletproof-cybersecurity-advanced-ai-email-security'
     },
     {
       title: 'Compliance Solutions',
-      body: 'Drive Growth, Mitigate Risk & Build Trust'
+      body: 'Drive Growth, Mitigate Risk & Build Trust',
+      url: 'https://safe-harbour-informatics.webflow.io/bulletproof-cybersecurity-compliance-solutions'
     },
     {
       title: 'FTC Safeguards Compliance',
-      body: 'Protect Data & Build Customer Trust'
+      body: 'Protect Data & Build Customer Trust',
+      url: 'https://safe-harbour-informatics.webflow.io/bulletproof-cybersecurity-ftc-safeguards-assessment'
     }
   ];
 
@@ -51,7 +57,7 @@
             '<h3>' + card.title + '</h3>' +
             '<p>' + card.body + '</p>' +
           '</div>' +
-          '<a class="bps-link" href="#" aria-label="Learn more about ' + card.title + '">' +
+          '<a class="bps-link" href="' + (card.url || '#') + '" aria-label="Learn more about ' + card.title + '">' +
             '<span class="bps-link-spacer-left" aria-hidden="true"></span>' +
             '<span>Learn More</span>' +
             '<img src="' + ARROW + '" alt="" aria-hidden="true">' +

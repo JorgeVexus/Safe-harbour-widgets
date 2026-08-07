@@ -459,7 +459,7 @@
             <span class="shi-ti" style="--shi-icon: url('https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba64480068d7c8f4d88_strategic%20ai%20consulting%20icon.svg')" aria-hidden="true"></span>
             <h2 class="shi-tt">Properly Integrated AI Drives Profits, Productivity and Success</h2>
             <p class="shi-tb">Many organizations struggle to identify where AI can provide the most value. Our assessment narrows the focus to processes and workflows with maximum potential impact where AI will deliver the greatest operational and financial return.</p>
-            <a href="#" class="shi-cta">Identify High-Impact Workflows <img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a493869da8eb02bf63548dc_Icon%20arrow%20button.svg" alt="" aria-hidden="true"></a>
+            <a href="https://safe-harbour-informatics.webflow.io/smart-ai-systems-strategic-ai-consulting" class="shi-cta">Identify High-Impact Workflows <img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a493869da8eb02bf63548dc_Icon%20arrow%20button.svg" alt="" aria-hidden="true"></a>
           </div>
           <div class="shi-img" aria-hidden="true"><img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/69bd7d8f4cae26139e37b652_strtegic%20ai%20consulting%20image.webp" alt=""></div>
         </div>
@@ -470,7 +470,7 @@
             <span class="shi-ti" style="--shi-icon: url('https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba5b550267ae318c7a0_ai%20transformation%20bundle%20icon.svg')" aria-hidden="true"></span>
             <h2 class="shi-tt">Unlock Your AI Potential</h2>
             <p class="shi-tb">Is your business ready for AI? Our bundled assessment evaluates your readiness and pinpoints the most valuable AI opportunities. By identifying high-impact workflows, we create a clear roadmap for AI integration, ensuring a faster ROI and long-term scalability for your business.</p>
-            <a href="#" class="shi-cta">Accelerate Your AI Transformation <img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a493869da8eb02bf63548dc_Icon%20arrow%20button.svg" alt="" aria-hidden="true"></a>
+            <a href="https://safe-harbour-informatics.webflow.io/smart-ai-systems-strategic-ai-integration" class="shi-cta">Accelerate Your AI Transformation <img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a493869da8eb02bf63548dc_Icon%20arrow%20button.svg" alt="" aria-hidden="true"></a>
           </div>
         </div>
 
@@ -480,7 +480,7 @@
             <span class="shi-ti" style="--shi-icon: url('https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba4585299f4854b10db_Ai%20workflow%20assesment%20icon.svg')" aria-hidden="true"></span>
             <h2 class="shi-tt">Precision Mapping for AI Success</h2>
             <p class="shi-tb">Our AI Workflow Assessment meticulously documents and analyzes key processes, delivering actionable roadmaps for AI-driven transformation and a developer-ready blueprint that accelerates your path to AI-powered optimization.</p>
-            <a href="#" class="shi-cta">Evaluate Your AI Readiness <img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a493869da8eb02bf63548dc_Icon%20arrow%20button.svg" alt="" aria-hidden="true"></a>
+            <a href="https://safe-harbour-informatics.webflow.io/smart-ai-systems-ai-workflow-assessment" class="shi-cta">Evaluate Your AI Readiness <img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a493869da8eb02bf63548dc_Icon%20arrow%20button.svg" alt="" aria-hidden="true"></a>
           </div>
         </div>
 
@@ -489,7 +489,7 @@
             <span class="shi-ti" style="--shi-icon: url('https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a492ba688f8dc3c9b6853c9_Our%20approach%20Icon.svg')" aria-hidden="true"></span>
             <h2 class="shi-tt">Our Approach To AI Transformation</h2>
             <p class="shi-tb">We help businesses thrive by harnessing AI in a way that multiplies human potential instead of replacing it—where strategy and culture come first, workflows are redesigned, and you turn time and profit losses into a durable competitive advantage that keeps you ahead.</p>
-            <a href="#" class="shi-cta">Multiply Your Team's Potential <img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a493869da8eb02bf63548dc_Icon%20arrow%20button.svg" alt="" aria-hidden="true"></a>
+            <a href="https://safe-harbour-informatics.webflow.io/smart-ai-systems-accounting-automation" class="shi-cta">Multiply Your Team's Potential <img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a493869da8eb02bf63548dc_Icon%20arrow%20button.svg" alt="" aria-hidden="true"></a>
           </div>
           <div class="shi-img" aria-hidden="true"><img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/69bd815bbdd71aa442354eab_our%20approach%20ai%20image.webp" alt=""></div>
         </div>
@@ -497,7 +497,7 @@
         <div class="shi-panel shi-grid" id="shi-p4" role="tabpanel">
           <div class="shi-gh">
             <h2>AI Across Your Industry</h2>
-            <a href="#" class="shi-cta">Find Your Industry's AI Blueprint <img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a493869da8eb02bf63548dc_Icon%20arrow%20button.svg" alt="" aria-hidden="true"></a>
+            <a href="https://safe-harbour-informatics.webflow.io/smart-ai-systems-ai-powered-phone-automation" class="shi-cta">Find Your Industry's AI Blueprint <img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a493869da8eb02bf63548dc_Icon%20arrow%20button.svg" alt="" aria-hidden="true"></a>
           </div>
           <div class="shi-grid-industries">
             <div class="shi-ic"><div class="shi-ip"><img src="https://cdn.prod.website-files.com/69bb0bc5f95cd9124b67936f/6a63a8284960aede89e3f25f_Container.svg" alt=""></div></div>
